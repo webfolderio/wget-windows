@@ -27,3 +27,7 @@ build_script:
  - copy C:\msys64\mingw64\bin\wget.exe wget
  - copy C:\msys64\mingw64\bin\zlib1.dll wget
  - 7z a wget.zip wget\*.*
+ 
+ artifacts:
+  - path: wget.zip
+    name: wget - x64 - windows
