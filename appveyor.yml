@@ -27,6 +27,7 @@ build_script:
  - copy C:\msys64\mingw64\bin\wget.exe wget
  - copy C:\msys64\mingw64\bin\zlib1.dll wget
  - copy C:\msys64\mingw64\bin\libssl-1_1-x64.dll wget
+ - copy C:\msys64\mingw64\bin\libcrypto-1_1-x64.dll wget
  - 7z a wget.zip wget\*.*
  - certUtil -hashfile wget.zip SHA512
 
