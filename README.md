@@ -11,3 +11,8 @@ so it may easily be called from scripts, cron jobs, terminals without X-Windows 
 ## Download
 
 [wget-x64-windows-1.20.3.zip](https://github.com/webfolderio/wget-windows/releases/download/1.20.3/wget-x64-windows-1.20.3.zip) - 4 MB
+
+## How to use wget
+
+Please read the official wget manual from the below link.
+[https://www.gnu.org/software/wget/manual/wget.html](https://www.gnu.org/software/wget/manual/wget.html)
