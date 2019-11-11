@@ -15,4 +15,5 @@ so it may easily be called from scripts, cron jobs, terminals without X-Windows 
 ## How to use wget
 
 Please read the official wget manual from the below link.
+
 [https://www.gnu.org/software/wget/manual/wget.html](https://www.gnu.org/software/wget/manual/wget.html)
