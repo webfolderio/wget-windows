@@ -15,7 +15,6 @@ build_script:
  - copy C:\msys64\mingw64\bin\libexpat-1.dll wget
  - copy C:\msys64\mingw64\bin\libgpg-error-0.dll wget
  - copy C:\msys64\mingw64\bin\libgpgme-11.dll wget
- - copy C:\msys64\mingw64\bin\libhogweed-4.dll wget
  - copy C:\msys64\mingw64\bin\libiconv-2.dll wget
  - copy C:\msys64\mingw64\bin\libidn2-0.dll wget
  - copy C:\msys64\mingw64\bin\libintl-8.dll wget
