@@ -17,3 +17,9 @@ so it may easily be called from scripts, cron jobs and terminals.
 Please read the official GNU Wget manual from the below link.
 
 [https://www.gnu.org/software/wget/manual/wget.html](https://www.gnu.org/software/wget/manual/wget.html)
+
+## Jotti Virus Scan
+
+Jotti antivirus scan report:
+
+[https://virusscan.jotti.org/en-US/filescanjob/twasclqwmu](https://virusscan.jotti.org/en-US/filescanjob/twasclqwmu)
