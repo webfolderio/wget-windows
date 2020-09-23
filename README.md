@@ -12,6 +12,8 @@ so it may easily be called from scripts, cron jobs and terminals.
 
 [wget-x64-windows-1.20.3.zip](https://github.com/webfolderio/wget-windows/releases/download/1.20.3/wget-x64-windows-1.20.3.zip) - 4 MB
 
+File checksum (SHA1): f3604d593791a86fea2731e395e14c7fe52536b2
+
 ## How to use wget
 
 Please read the official GNU Wget manual from the below link.
