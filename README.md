@@ -21,6 +21,7 @@ Please read the official GNU Wget manual from the below link.
 ### Build Environment
 
 wget is built on GitHub actions with on Ubuntu with mingw64 (GNU/gcc 9.3). It's virus-free and safe to use.
+
 All required libraries is **statically linked**, and it's not necessary to use third-party DLL.
 
 ## Jotti Virus Scan
