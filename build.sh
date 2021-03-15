@@ -55,7 +55,7 @@ make install
 (($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
-# build idn
+# build idn2
 # -----------------------------------------------------------------------------
 wget https://ftp.gnu.org/gnu/libidn/libidn2-2.3.0.tar.gz
 tar -xf libidn2-2.3.0.tar.gz
