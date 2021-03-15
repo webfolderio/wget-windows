@@ -19,5 +19,7 @@ jobs:
       - name: Archive library
         uses: actions/upload-artifact@v1
         with:
-          name: wget.exe
-          path: /home/runner/work/wget-windows/wget-windows/build-wget-webfolder.io/install/bin/wget.exe
+          name: wget-1.21.1-64bit-GnuTLS
+          path: build-wget-webfolder.io/install/wget-gnutls/wget.exe
+          name: wget-1.21.1-64bit-OpenSSL
+          path: build-wget-webfolder.io/install/wget-openssl/wget.exe
