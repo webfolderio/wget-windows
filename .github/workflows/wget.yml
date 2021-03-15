@@ -1,0 +1,20 @@
+name: wget
+
+on:
+  [push]
+jobs:
+  ubuntu:
+    name: ubuntu
+    runs-on: ubuntu-latest
+    if: "contains(toJSON(github.event.commits.*.message), '[build wget]')"
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout project
+      - name: Build
+        run: |
+          ./build.sh
+      - name: Archive library
+        uses: actions/upload-artifact@v1
+        with:
+          name: wget
+          path: build-wget-webfolder.io/install/bin/wget.exe
