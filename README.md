@@ -8,7 +8,7 @@ so it may easily be called from scripts, cron jobs and terminals.
 
 ## Download
 
-[wget-x64-windows-1.20.3.zip](https://github.com/webfolderio/wget-windows/releases/download/1.20.3/wget-x64-windows-1.20.3.zip) - 4 MB
+[wget-x64-windows-1.20.3.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.1/wget.exe) - 5,27 MB
 
 File checksums
 
@@ -66,4 +66,4 @@ We do not support OpenSSL, and we don't have a plan to support it.
 
 Jotti antivirus scan report:
 
-[https://virusscan.jotti.org/en-US/filescanjob/twasclqwmu](https://virusscan.jotti.org/en-US/filescanjob/twasclqwmu)
+[https://virusscan.jotti.org/en-US/filescanjob/ew5rc17uv6](https://virusscan.jotti.org/en-US/filescanjob/ew5rc17uv6)
