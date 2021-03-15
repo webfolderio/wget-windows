@@ -149,7 +149,9 @@ wget https://github.com/rockdaboot/libpsl/releases/download/0.21.1/libpsl-0.21.1
 tar -xf libpsl-0.21.1.tar.gz
 cd libpsl-0.21.1
 CFLAGS="-I$INSTALL_PATH/include" \
- LIBS="-L$INSTALL_PATH/lib -lunistring" \
+ LIBS="-L$INSTALL_PATH/lib -lunistring -lidn2" \
+ LIBIDN2_CFLAGS="-I$INSTALL_PATH/include" \
+ LIBIDN2_LIBS="-L$INSTALL_PATH/lib -lunistring -lidn2" \
  ./configure \
  --host=x86_64-w64-mingw32 \
  --disable-shared \
