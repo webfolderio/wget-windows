@@ -362,4 +362,4 @@ make
 make install
 (($? != 0)) && { printf '%s\n' "[wget] make install"; exit 1; }
 cd ..
-x86_64-w64-mingw32-strip ../install/bin/wget.exe
+x86_64-w64-mingw32-strip /home/runner/work/wget-windows/wget-windows/build-wget-webfolder.io/install/bin/wget.exe
