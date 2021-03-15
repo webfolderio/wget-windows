@@ -10,6 +10,10 @@ so it may easily be called from scripts, cron jobs and terminals.
 
 [wget-1.21.1.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.1/wget-1.21.1.zip) - 2,46 MB
 
+__This build is for only 64bit OS (Windows 7/Windows 8/Windows 10)__
+
+__This build use gnuTLS and not OpenSLL__
+
 File checksums for `wget-21.1.zip`:
 
 SHA1: `718a7bb736802197695c16a7f720b01acc9c6b09`
