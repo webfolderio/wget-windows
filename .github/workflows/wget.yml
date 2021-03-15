@@ -16,10 +16,13 @@ jobs:
           sudo apt-get install -y make m4 pkg-config automake gettext
           x86_64-w64-mingw32-gcc --version
           ./build.sh
-      - name: Archive library
+      - name: Archive library gnutls
         uses: actions/upload-artifact@v1
         with:
           name: wget-1.21.1-64bit-GnuTLS
           path: build-wget-webfolder.io/install/wget-gnutls/wget.exe
+      - name: Archive library openssl
+        uses: actions/upload-artifact@v1
+        with:
           name: wget-1.21.1-64bit-OpenSSL
           path: build-wget-webfolder.io/install/wget-openssl/wget.exe
