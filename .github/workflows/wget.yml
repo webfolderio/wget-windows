@@ -12,6 +12,9 @@ jobs:
         name: Checkout project
       - name: Build
         run: |
+          apt-get install -y mingw-w64
+          gcc --version
+          x86_64-w64-mingw32-gcc --version
           ./build.sh
       - name: Archive library
         uses: actions/upload-artifact@v1
