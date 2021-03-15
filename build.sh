@@ -116,6 +116,7 @@ CPPFLAGS="-DCARES_STATICLIB=1" \
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static \
+ --disable--tests \
  --disable-debug
 make
 make install
