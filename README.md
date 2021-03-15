@@ -8,17 +8,13 @@ so it may easily be called from scripts, cron jobs and terminals.
 
 ## Download
 
-[wget.exe](https://github.com/webfolderio/wget-windows/releases/download/1.21.1/wget.exe) - 5,27 MB
+[wget.exe](https://github.com/webfolderio/wget-windows/releases/download/1.21.1/wget-1.21.1.zip) - 2,46 MB
 
-File checksums:
+File checksums for `wget-21.1.zip`:
 
-SHA1: `e9d54048155d1b3b443b00b70f7f8bb621ff2df6`
+SHA1: `718a7bb736802197695c16a7f720b01acc9c6b09`
 
-MD4: `b4d83a260d62f9499c5d8421daa0f3fd`
-
-MD5: `ef38d9636d0ea687faf7c25a7b0852d5`
-
-SHA256: `540700a23460f7681f9264342c902363a1fbb7daf91930bb8f6944e681b6afd2`
+MD5: `fa4c50f9bad5309efd9c1d8fa1b3d62f`
 
 ## How to use wget
 
