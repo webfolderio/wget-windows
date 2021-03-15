@@ -4,7 +4,6 @@
 # https://webfolder.io
 # March 15, 2021
 #
-#
 mkdir build-wget-webfolder.io
 cd build-wget-webfolder.io
 mkdir install
