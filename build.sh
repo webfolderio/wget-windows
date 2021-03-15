@@ -31,11 +31,11 @@ CFLAGS="-I$INSTALL_PATH/include" \
  --disable-shared \
  --disable-documentation \
  --prefix=$INSTALL_PATH
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[nettle] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[nettle] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[nettle] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build tasn
@@ -48,11 +48,11 @@ cd libtasn1-4.16.0
  --disable-shared \
  --disable-doc \
  --prefix=$INSTALL_PATH
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[tasn] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[tasn] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[tasn] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build idn2
@@ -65,11 +65,11 @@ cd libidn2-2.3.0
  --disable-shared \
  --disable-doc \
  --prefix=$INSTALL_PATH
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[idn2] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[idn2] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[idn2] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build unistring
@@ -81,11 +81,11 @@ cd libunistring-0.9.10
  --host=x86_64-w64-mingw32 \
  --disable-shared \
  --prefix=$INSTALL_PATH
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[unistring] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[unistring] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[unistring] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build gnutls
@@ -116,11 +116,11 @@ PKG_CONFIG_PATH="$INSTALL_PATH/lib/pkgconfig" \
  --disable-doc \
  --disable-shared \
  --enable-static
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[unistring] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[unistring] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[unistring] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build cares
@@ -136,14 +136,14 @@ CPPFLAGS="-DCARES_STATICLIB=1" \
  --enable-static \
  --disable-tests \
  --disable-debug
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[cares] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[cares] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[cares] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
-# build libiconv
+# build iconv
 # -----------------------------------------------------------------------------
 wget https://ftp.gnu.org/gnu/libiconv/libiconv-1.16.tar.gz
 tar -xf libiconv-1.16.tar.gz
@@ -153,11 +153,11 @@ cd libiconv-1.16
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[iconv] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[iconv] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[iconv] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build psl
@@ -178,11 +178,11 @@ CFLAGS="-I$INSTALL_PATH/include" \
  --enable-builtin=libidn2 \
  --enable-runtime=libidn2 \
  --with-libiconv-prefix=$INSTALL_PATH
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[psl] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[psl] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[psl] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build pcre2
@@ -195,11 +195,11 @@ cd pcre2-10.36
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[pcre2] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[pcre2] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[pcre2] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build gpg-error
@@ -213,11 +213,11 @@ cd libgpg-error-1.41
  --prefix=$INSTALL_PATH \
  --enable-static \
  --disable-doc
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[gpg-error] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[gpg-error] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[gpg-error] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build assuan
@@ -232,11 +232,11 @@ cd libassuan-2.5.4
  --enable-static \
  --disable-doc \
  --with-libgpg-error-prefix=$INSTALL_PATH
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[assuan] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[assuan] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[assuan] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build gpgme
@@ -256,11 +256,11 @@ cd gpgme-1.15.1
  --disable-gpgconf-test \
  --disable-glibtest \
  --with-libassuan-prefix=$INSTALL_PATH
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[gpgme] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[gpgme] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[gpgme] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build expat
@@ -276,11 +276,11 @@ cd expat-2.2.10
  --without-docbook \
  --without-tests \
  --with-libgpg-error-prefix=$INSTALL_PATH
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[expat] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[expat] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[expat] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build metalink
@@ -297,11 +297,11 @@ EXPAT_CFLAGS="-I$INSTALL_PATH/include" \
  --enable-static \
  --with-libgpg-error-prefix=$INSTALL_PATH \
  --with-libexpat
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[metalink] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[metalink] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[metalink] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build zlib
@@ -310,11 +310,11 @@ wget https://zlib.net/zlib-1.2.11.tar.gz
 tar -xf zlib-1.2.11.tar.gz
 cd zlib-1.2.11
 CC=x86_64-w64-mingw32-gcc ./configure --64 --static --prefix=$INSTALL_PATH
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[zlib] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[zlib] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[zlib] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build wget
@@ -350,10 +350,10 @@ CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -D
  --with-libpsl \
  --with-metalink \
  --with-gpgme-prefix=$INSTALL_PATH
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[wget] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[wget] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[wget] make install"; exit 1; }
 cd ..
 x86_64-w64-mingw32-strip ../install/bin/wget.exe
