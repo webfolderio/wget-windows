@@ -8,7 +8,7 @@ so it may easily be called from scripts, cron jobs and terminals.
 
 ## Download
 
-[wget.exe](https://github.com/webfolderio/wget-windows/releases/download/1.21.1/wget-1.21.1.zip) - 2,46 MB
+[wget-1.21.1.zip](https://github.com/webfolderio/wget-windows/releases/download/untagged-83226cd0442b66424f86/wget-1.21.1.zip) - 2,46 MB
 
 File checksums for `wget-21.1.zip`:
 
