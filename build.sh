@@ -207,6 +207,11 @@ cd gpgme-1.15.1
  --prefix=$INSTALL_PATH \
  --enable-static \
  --with-libgpg-error-prefix=$INSTALL_PATH \
+ --disable-gpg-test \
+ --disable-g13-test \
+ --disable-gpgsm-test \
+ --disable-gpgconf-test \
+ --disable-glibtest \
  --with-libassuan-prefix=$INSTALL_PATH
 make
 make install
