@@ -1,7 +1,5 @@
 # Windows binaries of GNU Wget
 
-[![AppVeyor](https://img.shields.io/appveyor/ci/WebFolder/wget-windows.svg?label=Windows)](https://ci.appveyor.com/project/WebFolder/wget-windows)
-
 A command-line utility for retrieving files using HTTP, HTTPS and FTP protocols.
 
 GNU Wget is a free software package for retrieving files using HTTP, HTTPS, FTP
