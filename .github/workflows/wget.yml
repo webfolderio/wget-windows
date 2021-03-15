@@ -12,7 +12,8 @@ jobs:
         name: Checkout project
       - name: Build
         run: |
-          gcc --version
+          sudo apt-get install -y mingw-w64
+          sudo apt-get install -y make m4 pkg-config automake gettext
           x86_64-w64-mingw32-gcc --version
           ./build.sh
       - name: Archive library
