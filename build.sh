@@ -12,11 +12,11 @@ cd gmp-6.2.1
  --host=x86_64-w64-mingw32 \
  --disable-shared \
  --prefix=$INSTALL_PATH
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[gmp] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[gmp] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[gmp] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build nettle
@@ -116,11 +116,11 @@ PKG_CONFIG_PATH="$INSTALL_PATH/lib/pkgconfig" \
  --disable-doc \
  --disable-shared \
  --enable-static
-(($? != 0)) && { printf '%s\n' "[unistring] configure failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[gnutls] configure failed"; exit 1; }
 make
-(($? != 0)) && { printf '%s\n' "[unistring] make failed"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[gnutls] make failed"; exit 1; }
 make install
-(($? != 0)) && { printf '%s\n' "[unistring] make install"; exit 1; }
+(($? != 0)) && { printf '%s\n' "[gnutls] make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build cares
