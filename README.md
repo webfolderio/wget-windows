@@ -8,7 +8,7 @@ so it may easily be called from scripts, cron jobs and terminals.
 
 ## Download
 
-[wget-x64-windows-1.20.3.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.1/wget.exe) - 5,27 MB
+[wget.exe](https://github.com/webfolderio/wget-windows/releases/download/1.21.1/wget.exe) - 5,27 MB
 
 File checksums
 
