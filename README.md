@@ -28,7 +28,8 @@ All required libraries is **statically linked**, and it's not necessary to use t
 ### wget fatures
 
 wget-windows bundled with all wget features except nls (multi-lang version).
-Feature list: +cares +digest +gpgme +https +ipv6 +iri +large-file +metalink -nls +ntlm +opie +psl +ssl/gnutls
+Feature list:
+`+cares +digest +gpgme +https +ipv6 +iri +large-file +metalink -nls +ntlm +opie +psl +ssl/gnutls`
 
 ### Staticly Linked Libraries
 
