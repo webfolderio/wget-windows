@@ -211,7 +211,7 @@ cd libgpg-error-1.41
  --host=x86_64-w64-mingw32 \
  --disable-shared \
  --prefix=$INSTALL_PATH \
- --enable-static
+ --enable-static \
  --disable-doc
 (($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
