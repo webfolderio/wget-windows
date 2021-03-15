@@ -12,11 +12,11 @@ cd gmp-6.2.1
  --host=x86_64-w64-mingw32 \
  --disable-shared \
  --prefix=$INSTALL_PATH
-test $? -eq 0 || echo "can not configure gmp" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build gmp" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install gmp" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build nettle
@@ -31,11 +31,11 @@ CFLAGS="-I$INSTALL_PATH/include" \
  --disable-shared \
  --disable-documentation \
  --prefix=$INSTALL_PATH
-test $? -eq 0 || echo "can not configure nettle" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build nettle" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install nettle" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build tasn
@@ -48,11 +48,11 @@ cd libtasn1-4.16.0
  --disable-shared \
  --disable-doc \
  --prefix=$INSTALL_PATH
-test $? -eq 0 || echo "can not configure libtasn1" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build libtasn1" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install libtasn1" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build idn
@@ -65,11 +65,11 @@ cd libidn2-2.3.0
  --disable-shared \
  --disable-doc \
  --prefix=$INSTALL_PATH
-test $? -eq 0 || echo "can not configure libidn2" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build libidn2" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install libidn2" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build unistring
@@ -81,11 +81,11 @@ cd libunistring-0.9.10
  --host=x86_64-w64-mingw32 \
  --disable-shared \
  --prefix=$INSTALL_PATH
-test $? -eq 0 || echo "can not configure libunistring" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build libunistring" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install libunistring" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build gnutls
@@ -116,11 +116,11 @@ PKG_CONFIG_PATH="$INSTALL_PATH/lib/pkgconfig" \
  --disable-doc \
  --disable-shared \
  --enable-static
-test $? -eq 0 || echo "can not configure gnutls" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build gnutls" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install gnutls" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build cares
@@ -136,11 +136,11 @@ CPPFLAGS="-DCARES_STATICLIB=1" \
  --enable-static \
  --disable-tests \
  --disable-debug
-test $? -eq 0 || echo "can not configure cares" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build cares" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install cares" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build psl
@@ -154,11 +154,11 @@ cd libpsl-0.21.1
  --prefix=$INSTALL_PATH \
  --enable-static \
  --disable-gtk-doc
-test $? -eq 0 || echo "can not configure libpsl" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build libpsl" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install libpsl" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build psl
@@ -171,11 +171,11 @@ cd libiconv-1.16
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static
-test $? -eq 0 || echo "can not configure libiconv" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build libiconv" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install libiconv" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build pcre2
@@ -188,11 +188,11 @@ cd pcre2-10.36
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static
-test $? -eq 0 || echo "can not configure pcre2" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build pcre2" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install pcre2" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build gpg-error
@@ -206,11 +206,11 @@ cd libgpg-error-1.41
  --prefix=$INSTALL_PATH \
  --enable-static
  --disable-doc
-test $? -eq 0 || echo "can not configure libgpg-error" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build libgpg-error" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install libgpg-error" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build assuan
@@ -225,11 +225,11 @@ cd libassuan-2.5.4
  --enable-static \
  --disable-doc \
  --with-libgpg-error-prefix=$INSTALL_PATH
-test $? -eq 0 || echo "can not configure libassuan" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build libassuan" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install libassuan" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build gpgme
@@ -249,11 +249,11 @@ cd gpgme-1.15.1
  --disable-gpgconf-test \
  --disable-glibtest \
  --with-libassuan-prefix=$INSTALL_PATH
-test $? -eq 0 || echo "can not configure gpgme" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build gpgme" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install gpgme" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build expat
@@ -269,11 +269,11 @@ cd expat-2.2.10
  --without-docbook \
  --without-tests \
  --with-libgpg-error-prefix=$INSTALL_PATH
-test $? -eq 0 || echo "can not configure expat" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build expat" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install expat" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build metalink
@@ -290,11 +290,11 @@ EXPAT_CFLAGS="-I$INSTALL_PATH/include" \
  --enable-static \
  --with-libgpg-error-prefix=$INSTALL_PATH \
  --with-libexpat
-test $? -eq 0 || echo "can not configure metalink" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build metalink" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install metalink" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build wget
@@ -303,11 +303,11 @@ wget https://zlib.net/zlib-1.2.11.tar.gz
 tar -xf zlib-1.2.11.tar.gz
 cd zlib-1.2.11
 CC=x86_64-w64-mingw32-gcc ./configure --64 --static --prefix=$INSTALL_PATH
-test $? -eq 0 || echo "can not configure zlib" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build zlib" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install zlib" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
 # build wget
@@ -343,9 +343,10 @@ CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -D
  --with-libpsl \
  --with-metalink \
  --with-gpgme-prefix=$INSTALL_PATH
-test $? -eq 0 || echo "can not configure wget" && exit $?
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
-test $? -eq 0 || echo "can not build wget" && exit $?
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
 make install
-test $? -eq 0 || echo "can not install wget" && exit $?
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+cd ..
 x86_64-w64-mingw32-strip ../install/bin/wget.exe
