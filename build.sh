@@ -143,6 +143,23 @@ make install
 (($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
+# build libiconv
+# -----------------------------------------------------------------------------
+wget https://ftp.gnu.org/gnu/libiconv/libiconv-1.16.tar.gz
+tar -xf libiconv-1.16.tar.gz
+cd libiconv-1.16
+./configure \
+ --host=x86_64-w64-mingw32 \
+ --disable-shared \
+ --prefix=$INSTALL_PATH \
+ --enable-static
+(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
+make
+(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
+make install
+(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
+cd ..
+# -----------------------------------------------------------------------------
 # build psl
 # -----------------------------------------------------------------------------
 wget https://github.com/rockdaboot/libpsl/releases/download/0.21.1/libpsl-0.21.1.tar.gz
@@ -159,24 +176,8 @@ CFLAGS="-I$INSTALL_PATH/include" \
  --enable-static \
  --disable-gtk-doc \
  --enable-builtin=libidn2 \
- --enable-runtime=libidn2
-(($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
-make
-(($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
-make install
-(($? != 0)) && { printf '%s\n' "make install"; exit 1; }
-cd ..
-# -----------------------------------------------------------------------------
-# build libiconv
-# -----------------------------------------------------------------------------
-wget https://ftp.gnu.org/gnu/libiconv/libiconv-1.16.tar.gz
-tar -xf libiconv-1.16.tar.gz
-cd libiconv-1.16
-./configure \
- --host=x86_64-w64-mingw32 \
- --disable-shared \
- --prefix=$INSTALL_PATH \
- --enable-static
+ --enable-runtime=libidn2 \
+ --with-libiconv-prefix=$INSTALL_PATH
 (($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
 (($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
