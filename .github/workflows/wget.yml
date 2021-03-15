@@ -5,16 +5,13 @@ on:
 jobs:
   ubuntu:
     name: ubuntu
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     if: "contains(toJSON(github.event.commits.*.message), '[build wget]')"
     steps:
       - uses: actions/checkout@v2
         name: Checkout project
       - name: Build
         run: |
-          sudo apt-get update -y
-          sudo apt-get install -y mingw-w64
-          sudo apt-get install -y make m4 pkg-config automake gettext
           gcc --version
           x86_64-w64-mingw32-gcc --version
           ./build.sh
