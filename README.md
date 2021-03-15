@@ -44,7 +44,7 @@ Feature list:
 
 Our wget executable is bundled with GnuTLS.
 
-We do not support OpenSSL, and we don't have a plan to support it.
+We do not support OpenSSL, and we have a plan to support it.
 
 ### Staticly Linked Libraries
 
