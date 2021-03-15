@@ -161,7 +161,7 @@ make install
 (($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
-# build psl
+# build libiconv
 # -----------------------------------------------------------------------------
 wget https://ftp.gnu.org/gnu/libiconv/libiconv-1.16.tar.gz
 tar -xf libiconv-1.16.tar.gz
@@ -297,7 +297,7 @@ make install
 (($? != 0)) && { printf '%s\n' "make install"; exit 1; }
 cd ..
 # -----------------------------------------------------------------------------
-# build wget
+# build zlib
 # -----------------------------------------------------------------------------
 wget https://zlib.net/zlib-1.2.11.tar.gz
 tar -xf zlib-1.2.11.tar.gz
