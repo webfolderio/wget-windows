@@ -291,4 +291,4 @@ CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -D
  --with-gpgme-prefix=$INSTALL_PATH
 make
 make install
-strip ../install/bin/wget.exe
+x86_64-w64-mingw32-strip ../install/bin/wget.exe
