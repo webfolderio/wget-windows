@@ -148,12 +148,16 @@ cd ..
 wget https://github.com/rockdaboot/libpsl/releases/download/0.21.1/libpsl-0.21.1.tar.gz
 tar -xf libpsl-0.21.1.tar.gz
 cd libpsl-0.21.1
-./configure \
+CFLAGS="-I$INSTALL_PATH/include" \
+ LIBS="-L$INSTALL_PATH/lib -lunistring" \
+ ./configure \
  --host=x86_64-w64-mingw32 \
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static \
- --disable-gtk-doc
+ --disable-gtk-doc \
+ --enable-builtin=libidn2 \
+ --enable-runtime=libidn2
 (($? != 0)) && { printf '%s\n' "configure failed"; exit 1; }
 make
 (($? != 0)) && { printf '%s\n' "make failed"; exit 1; }
