@@ -56,12 +56,6 @@ OpenSSL version:
 
 `+cares +digest +gpgme +https +ipv6 +iri +large-file +metalink -nls +ntlm +opie +psl +ssl/openssl`
 
-### TLS Library
-
-Our wget executable is bundled with GnuTLS.
-
-We do not support OpenSSL, and we have a plan to support it.
-
 ### Staticly Linked Libraries (GnuTLS version)
 
 gmp 6.2.1, nettle 3.7.1, libtasn1 4.16, libidn2 2.3.0, libunistring 0.9.10, gnutls 3.6.15, cares 1.17.1, libpsl 0.21.1, libiconv 1.16, pcre2 10.36, libgpg-error 1.41, libassuan 2.5.4, gpgme 1.15.1, expat 2.2.10, libmetalink 0.1.3, zlib 1.2.11
