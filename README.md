@@ -44,9 +44,9 @@ wget is built on GitHub Actions and cross compiled with mingw64 (Ubuntu & GNU/gc
 All required libraries is **statically linked**, and it's not necessary to use third-party DLL.
 
 
-### wget features
+### Wget features
 
-wget-windows bundled with all wget features except nls (multi-lang version).
+Wget windows bundled with all wget features except nls (multi-lang version).
 
 GnuTLS version:
 
