@@ -8,11 +8,11 @@ so it may easily be called from scripts, cron jobs and terminals.
 
 ## Download
 
-__This build use GnuTLS__
+__This build use GnuTLS 3.6.15__
 
 [wget-1.21.1-64bit-GnuTLS.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.1/wget-1.21.1-64bit-GnuTLS.zip) - 2,46 MB
 
-__This build use OpenSSL__
+__This build use OpenSSL 1.1.1j__
 
 [wget-1.21.1-64bit-OpenSSL.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.1/wget-1.21.1-64bit-OpenSSL.zip) - 2,80 MB
 
