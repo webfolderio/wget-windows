@@ -68,13 +68,18 @@ libidn2 2.3.0, libunistring 0.9.10, openssl 1.1.1j, cares 1.17.1, libpsl 0.21.1,
 
 ### Jotti Virus Scan
 
-Jotti antivirus scan report (GnuTLS):
+Antivirus scan report (GnuTLS):
 
-[https://virusscan.jotti.org/en-US/filescanjob/i1cj28dwdl](https://virusscan.jotti.org/en-US/filescanjob/i1cj28dwdl)
+[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/i1cj28dwdl)
 
-Jotti antivirus scan report (OpenSSL):
+[VirusTotal Scan Results](https://www.virustotal.com/gui/url/f1dfd1ccec602dbddba570a5e0ff27bc86fbc2b2e261b5f32013549f10f38840/detection)
 
-[https://virusscan.jotti.org/en-US/filescanjob/8szxt4hrh7](https://virusscan.jotti.org/en-US/filescanjob/8szxt4hrh7)
+Antivirus scan report (OpenSSL):
+
+[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/8szxt4hrh7)
+
+[VirusTotal Scan Results](https://www.virustotal.com/gui/url/a3a2e818bee30a2303a9e9e20014fec7ed54734ef18c3f238c21de35d885022c/detection)
+
 
 ### Notes
 
