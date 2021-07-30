@@ -12,7 +12,7 @@ jobs:
         name: Checkout project
       - name: Build
         run: |
-          sudo apt-get install -y mingw-w64
+          sudo apt-get install -y mingw-w64 mingw-w64-i686-dev mingw-w64-tools
           sudo apt-get install -y make m4 pkg-config automake gettext
           x86_64-w64-mingw32-gcc --version
           ./build.sh
