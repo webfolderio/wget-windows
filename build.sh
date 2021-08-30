@@ -96,9 +96,9 @@ cd ..
 # -----------------------------------------------------------------------------
 # build gnutls
 # -----------------------------------------------------------------------------
-wget https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/gnutls-3.6.15.tar.xz
-tar -xf gnutls-3.6.15.tar.xz
-cd gnutls-3.6.15
+wget https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/gnutls-3.6.16.tar.xz
+tar -xf gnutls-3.6.16.tar.xz
+cd gnutls-3.6.16
 PKG_CONFIG_PATH="$INSTALL_PATH/lib/pkgconfig" \
  CFLAGS="-I$INSTALL_PATH/include" \
  LDFLAGS="-L$INSTALL_PATH/lib" \
@@ -131,9 +131,9 @@ cd ..
 # -----------------------------------------------------------------------------
 # build cares
 # -----------------------------------------------------------------------------
-wget https://github.com/c-ares/c-ares/releases/download/cares-1_17_1/c-ares-1.17.1.tar.gz
-tar -xf c-ares-1.17.1.tar.gz
-cd c-ares-1.17.1
+wget https://github.com/c-ares/c-ares/releases/download/cares-1_17_2/c-ares-1.17.2.tar.gz
+tar -xf c-ares-1.17.2.tar.gz
+cd c-ares-1.17.2
 CPPFLAGS="-DCARES_STATICLIB=1" \
  ./configure \
  --host=x86_64-w64-mingw32 \
@@ -193,9 +193,9 @@ cd ..
 # -----------------------------------------------------------------------------
 # build pcre2
 # -----------------------------------------------------------------------------
-wget https://ftp.pcre.org/pub/pcre/pcre2-10.36.tar.gz
-tar -xf pcre2-10.36.tar.gz
-cd pcre2-10.36
+wget https://ftp.pcre.org/pub/pcre/pcre2-10.37.tar.gz
+tar -xf pcre2-10.37.tar.gz
+cd pcre2-10.37
 ./configure \
  --host=x86_64-w64-mingw32 \
  --disable-shared \
@@ -210,9 +210,9 @@ cd ..
 # -----------------------------------------------------------------------------
 # build gpg-error
 # -----------------------------------------------------------------------------
-wget https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.41.tar.gz
-tar -xf libgpg-error-1.41.tar.gz
-cd libgpg-error-1.41
+wget https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.42.tar.gz
+tar -xf libgpg-error-1.42.tar.gz
+cd libgpg-error-1.42
 ./configure \
  --host=x86_64-w64-mingw32 \
  --disable-shared \
@@ -228,9 +228,9 @@ cd ..
 # -----------------------------------------------------------------------------
 # build assuan
 # -----------------------------------------------------------------------------
-wget https://gnupg.org/ftp/gcrypt/libassuan/libassuan-2.5.4.tar.bz2
-tar -xf libassuan-2.5.4.tar.bz2
-cd libassuan-2.5.4
+wget https://gnupg.org/ftp/gcrypt/libassuan/libassuan-2.5.5.tar.bz2
+tar -xf libassuan-2.5.5.tar.bz2
+cd libassuan-2.5.5
 ./configure \
  --host=x86_64-w64-mingw32 \
  --disable-shared \
@@ -271,9 +271,9 @@ cd ..
 # -----------------------------------------------------------------------------
 # build expat
 # -----------------------------------------------------------------------------
-wget https://github.com/libexpat/libexpat/releases/download/R_2_2_10/expat-2.2.10.tar.gz
-tar -xf expat-2.2.10.tar.gz
-cd expat-2.2.10
+wget https://github.com/libexpat/libexpat/releases/download/R_2_4_1/expat-2.4.1.tar.gz
+tar -xf expat-2.4.1.tar.gz
+cd expat-2.4.1
 ./configure \
  --host=x86_64-w64-mingw32 \
  --disable-shared \
@@ -325,9 +325,9 @@ cd ..
 # -----------------------------------------------------------------------------
 # build openssl
 # -----------------------------------------------------------------------------
-wget https://www.openssl.org/source/openssl-1.1.1j.tar.gz
-tar -xf openssl-1.1.1j.tar.gz
-cd openssl-1.1.1j
+wget https://www.openssl.org/source/openssl-1.1.1l.tar.gz
+tar -xf openssl-1.1.1l.tar.gz
+cd openssl-1.1.1l
 ./Configure \
  --static \
  -static \
