@@ -345,9 +345,9 @@ cd ..
 # -----------------------------------------------------------------------------
 # build wget (gnuTLS)
 # -----------------------------------------------------------------------------
-wget https://ftp.gnu.org/gnu/wget/wget-1.21.1.tar.gz
-tar -xf wget-1.21.1.tar.gz
-cd wget-1.21.1
+wget https://ftp.gnu.org/gnu/wget/wget-1.21.2.tar.gz
+tar -xf wget-1.21.2.tar.gz
+cd wget-1.21.2
 CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -DPCRE2_STATIC=1 -DNDEBUG -O2 -march=x86-64 -mtune=generic" \
  LDFLAGS="-L$INSTALL_PATH/lib -static -static-libgcc" \
  GNUTLS_CFLAGS=$CFLAGS \
