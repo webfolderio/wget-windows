@@ -20,14 +20,14 @@ __This build use OpenSSL 1.1.1j__
 
 __Both of the builds are for only 64 bit OS (Windows 7/Windows 8/Windows 10)__
 
-File checksums for *wget-1.21.1-64bit-GnuTLS.zip*:
+File checksums for *wget-1.21.2-64bit-GnuTLS.zip*:
 
 SHA1: `61d31ee82bec32dc0919c2c25b1e5efb4b7e095a`
 
 MD5: `8d475d03913a6548e7f59acbbb22552e`
 
 
-File checksums for *wget-1.21.1-64bit-OpenSSL.zip*:
+File checksums for *wget-1.21.2-64bit-OpenSSL.zip*:
 
 SHA1: `29487581ac03dd2272ee996e6fd2851fa529795b`
 
