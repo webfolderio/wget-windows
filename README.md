@@ -1,4 +1,4 @@
-# Windows binaries of GNU Wget 1.21.1
+# Windows binaries of GNU Wget 1.21.2
 
 [![wget](https://github.com/webfolderio/wget-windows/actions/workflows/wget.yml/badge.svg)](https://github.com/webfolderio/wget-windows/actions/workflows/wget.yml)
 
@@ -12,26 +12,26 @@ so it may easily be called from scripts, cron jobs and terminals.
 
 __This build use GnuTLS 3.6.15__
 
-[wget-1.21.1-64bit-GnuTLS.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.1/wget-1.21.1-64bit-GnuTLS.zip) - 2,46 MB
+7[wget-1.21.2-64bit-GnuTLS.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.2/wget-1.21.2-64bit-GnuTLS.zip) - 2,47 MB
 
 __This build use OpenSSL 1.1.1j__
 
-[wget-1.21.1-64bit-OpenSSL.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.1/wget-1.21.1-64bit-OpenSSL.zip) - 2,80 MB
+[wget-1.21.2-64bit-OpenSSL.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.2/wget-1.21.2-64bit-OpenSSL.zip) - 2,90 MB
 
 __Both of the builds are for only 64 bit OS (Windows 7/Windows 8/Windows 10)__
 
 File checksums for *wget-1.21.1-64bit-GnuTLS.zip*:
 
-SHA1: `5debe6203fe3fca72835b858f56e60b84a71792c`
+SHA1: `61d31ee82bec32dc0919c2c25b1e5efb4b7e095a`
 
-MD5: `c446e2114567f9e30806213a24700b6e`
+MD5: `8d475d03913a6548e7f59acbbb22552e`
 
 
 File checksums for *wget-1.21.1-64bit-OpenSSL.zip*:
 
-SHA1: `7cacbe3a6cb14a6feeeaf28fa257ee3bf6c63178`
+SHA1: `29487581ac03dd2272ee996e6fd2851fa529795b`
 
-MD5: `7214a5a91aa04ac7cc5886995f240cfb`
+MD5: `0c6bd2e48ce07418bd486b403713f3bb`
 
 ## How to use wget
 
@@ -70,15 +70,15 @@ libidn2 2.3.0, libunistring 0.9.10, openssl 1.1.1j, cares 1.17.1, libpsl 0.21.1,
 
 Antivirus scan report (GnuTLS):
 
-[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/i1cj28dwdl)
+[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/xw6rznz7js)
 
 [VirusTotal Scan Results](https://www.virustotal.com/gui/url/f1dfd1ccec602dbddba570a5e0ff27bc86fbc2b2e261b5f32013549f10f38840/detection)
 
 Antivirus scan report (OpenSSL):
 
-[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/8szxt4hrh7)
+[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/uiw0zh2xka)
 
-[VirusTotal Scan Results](https://www.virustotal.com/gui/url/a3a2e818bee30a2303a9e9e20014fec7ed54734ef18c3f238c21de35d885022c/detection)
+[VirusTotal Scan Results](https://www.virustotal.com/gui/file/399069ab649ab2ee4f15f8eb50f561c7179d1c5e28f1c1988ca4138e98d2e2fa?nocache=1)
 
 
 ### Notes
