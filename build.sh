@@ -8,14 +8,17 @@ mkdir build-wget-webfolder.io
 cd build-wget-webfolder.io
 mkdir install
 export INSTALL_PATH=$PWD/install
+export WGET_MINGW_HOST=x86_64-w64-mingw32
+export WGET_ARCH=x86-64
+export MINGW_STRIP_TOOL=x86_64-w64-mingw32-strip
 # -----------------------------------------------------------------------------
 # build gmp
 # -----------------------------------------------------------------------------
 wget https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz
-tar -xf gmp-6.2.1.tar.xz 
+tar -xf gmp-6.2.1.tar.xz
 cd gmp-6.2.1
 ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --disable-shared \
  --prefix=$INSTALL_PATH
 (($? != 0)) && { printf '%s\n' "[gmp] configure failed"; exit 1; }
@@ -33,7 +36,7 @@ cd nettle-3.7.1
 CFLAGS="-I$INSTALL_PATH/include" \
  LDFLAGS="-L$INSTALL_PATH/lib" \
  ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --disable-shared \
  --disable-documentation \
  --prefix=$INSTALL_PATH
@@ -46,11 +49,11 @@ cd ..
 # -----------------------------------------------------------------------------
 # build tasn
 # -----------------------------------------------------------------------------
-wget https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.16.0.tar.gz
-tar -xf libtasn1-4.16.0.tar.gz
-cd libtasn1-4.16.0
+wget https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.18.0.tar.gz
+tar -xf libtasn1-4.18.0.tar.gz
+cd libtasn1-4.18.0
 ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --disable-shared \
  --disable-doc \
  --prefix=$INSTALL_PATH
@@ -63,11 +66,11 @@ cd ..
 # -----------------------------------------------------------------------------
 # build idn2
 # -----------------------------------------------------------------------------
-wget https://ftp.gnu.org/gnu/libidn/libidn2-2.3.0.tar.gz
-tar -xf libidn2-2.3.0.tar.gz
-cd libidn2-2.3.0
+wget https://ftp.gnu.org/gnu/libidn/libidn2-2.3.2.tar.gz
+tar -xf libidn2-2.3.2.tar.gz
+cd libidn2-2.3.2
 ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --disable-shared \
  --disable-doc \
  --prefix=$INSTALL_PATH
@@ -84,7 +87,7 @@ wget https://ftp.gnu.org/gnu/libunistring/libunistring-0.9.10.tar.gz
 tar -xf libunistring-0.9.10.tar.gz
 cd libunistring-0.9.10
 ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --disable-shared \
  --prefix=$INSTALL_PATH
 (($? != 0)) && { printf '%s\n' "[unistring] configure failed"; exit 1; }
@@ -96,9 +99,9 @@ cd ..
 # -----------------------------------------------------------------------------
 # build gnutls
 # -----------------------------------------------------------------------------
-wget https://www.gnupg.org/ftp/gcrypt/gnutls/v3.6/gnutls-3.6.16.tar.xz
-tar -xf gnutls-3.6.16.tar.xz
-cd gnutls-3.6.16
+wget https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.2.tar.xz
+tar -xf gnutls-3.7.2.tar.xz
+cd gnutls-3.7.2
 PKG_CONFIG_PATH="$INSTALL_PATH/lib/pkgconfig" \
  CFLAGS="-I$INSTALL_PATH/include" \
  LDFLAGS="-L$INSTALL_PATH/lib" \
@@ -113,7 +116,7 @@ PKG_CONFIG_PATH="$INSTALL_PATH/lib/pkgconfig" \
  HOGWEED_CFLAGS=$CFLAGS \
  LIBIDN2_CFLAGS=$CFLAGS \
  ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --prefix=$INSTALL_PATH \
  --with-included-unistring \
  --disable-openssl-compatibility \
@@ -131,12 +134,12 @@ cd ..
 # -----------------------------------------------------------------------------
 # build cares
 # -----------------------------------------------------------------------------
-wget https://github.com/c-ares/c-ares/releases/download/cares-1_17_2/c-ares-1.17.2.tar.gz
-tar -xf c-ares-1.17.2.tar.gz
-cd c-ares-1.17.2
+wget https://github.com/c-ares/c-ares/releases/download/cares-1_18_1/c-ares-1.18.1.tar.gz
+tar -xf c-ares-1.18.1.tar.gz
+cd c-ares-1.18.1
 CPPFLAGS="-DCARES_STATICLIB=1" \
  ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static \
@@ -155,7 +158,7 @@ wget https://ftp.gnu.org/gnu/libiconv/libiconv-1.16.tar.gz
 tar -xf libiconv-1.16.tar.gz
 cd libiconv-1.16
 ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static
@@ -176,7 +179,7 @@ CFLAGS="-I$INSTALL_PATH/include" \
  LIBIDN2_CFLAGS="-I$INSTALL_PATH/include" \
  LIBIDN2_LIBS="-L$INSTALL_PATH/lib -lunistring -lidn2" \
  ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static \
@@ -193,11 +196,11 @@ cd ..
 # -----------------------------------------------------------------------------
 # build pcre2
 # -----------------------------------------------------------------------------
-wget https://ftp.pcre.org/pub/pcre/pcre2-10.37.tar.gz
-tar -xf pcre2-10.37.tar.gz
-cd pcre2-10.37
+wget https://github.com/PhilipHazel/pcre2/releases/download/pcre2-10.39/pcre2-10.39.tar.gz
+tar -xf pcre2-10.39.tar.gz
+cd pcre2-10.39
 ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static
@@ -210,11 +213,11 @@ cd ..
 # -----------------------------------------------------------------------------
 # build gpg-error
 # -----------------------------------------------------------------------------
-wget https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.42.tar.gz
-tar -xf libgpg-error-1.42.tar.gz
-cd libgpg-error-1.42
+wget https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.43.tar.gz
+tar -xf libgpg-error-1.43.tar.gz
+cd libgpg-error-1.43
 ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static \
@@ -232,7 +235,7 @@ wget https://gnupg.org/ftp/gcrypt/libassuan/libassuan-2.5.5.tar.bz2
 tar -xf libassuan-2.5.5.tar.bz2
 cd libassuan-2.5.5
 ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static \
@@ -247,11 +250,11 @@ cd ..
 # -----------------------------------------------------------------------------
 # build gpgme
 # -----------------------------------------------------------------------------
-wget https://gnupg.org/ftp/gcrypt/gpgme/gpgme-1.15.1.tar.bz2
-tar -xf gpgme-1.15.1.tar.bz2 
-cd gpgme-1.15.1
+wget https://gnupg.org/ftp/gcrypt/gpgme/gpgme-1.16.0.tar.bz2
+tar -xf gpgme-1.16.0.tar.bz2
+cd gpgme-1.16.0
 ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static \
@@ -271,11 +274,11 @@ cd ..
 # -----------------------------------------------------------------------------
 # build expat
 # -----------------------------------------------------------------------------
-wget https://github.com/libexpat/libexpat/releases/download/R_2_4_1/expat-2.4.1.tar.gz
-tar -xf expat-2.4.1.tar.gz
-cd expat-2.4.1
+wget https://github.com/libexpat/libexpat/releases/download/R_2_4_2/expat-2.4.2.tar.gz
+tar -xf expat-2.4.2.tar.gz
+cd expat-2.4.2
 ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static \
@@ -297,7 +300,7 @@ cd libmetalink-0.1.3
 EXPAT_CFLAGS="-I$INSTALL_PATH/include" \
  EXPAT_LIBS="-L$INSTALL_PATH/lib -lexpat" \
  ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --disable-shared \
  --prefix=$INSTALL_PATH \
  --enable-static \
@@ -325,9 +328,9 @@ cd ..
 # -----------------------------------------------------------------------------
 # build openssl
 # -----------------------------------------------------------------------------
-wget https://www.openssl.org/source/openssl-1.1.1l.tar.gz
-tar -xf openssl-1.1.1l.tar.gz
-cd openssl-1.1.1l
+wget https://www.openssl.org/source/openssl-1.1.1m.tar.gz
+tar -xf openssl-1.1.1m.tar.gz
+cd openssl-1.1.1m
 ./Configure \
  --static \
  -static \
@@ -348,7 +351,7 @@ cd ..
 wget https://ftp.gnu.org/gnu/wget/wget-1.21.2.tar.gz
 tar -xf wget-1.21.2.tar.gz
 cd wget-1.21.2
-CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -DPCRE2_STATIC=1 -DNDEBUG -O2 -march=x86-64 -mtune=generic" \
+CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -DPCRE2_STATIC=1 -DNDEBUG -O2 -march=$WGET_ARCH -mtune=generic" \
  LDFLAGS="-L$INSTALL_PATH/lib -static -static-libgcc" \
  GNUTLS_CFLAGS=$CFLAGS \
  GNUTLS_LIBS="-L$INSTALL_PATH/lib -lgnutls" \
@@ -362,7 +365,7 @@ CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -D
  METALINK_LIBS="-L$INSTALL_PATH/lib -lmetalink -lexpat" \
  LIBS="-L$INSTALL_PATH/lib -lhogweed -lnettle -lgmp -ltasn1 -lidn2 -lpsl -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lz -lcrypt32" \
  ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --prefix=$INSTALL_PATH \
  --disable-debug \
  --disable-valgrind-tests \
@@ -382,14 +385,14 @@ make install
 (($? != 0)) && { printf '%s\n' "[wget gnutls] make install"; exit 1; }
 mkdir $INSTALL_PATH/wget-gnutls
 cp $INSTALL_PATH/bin/wget.exe $INSTALL_PATH/wget-gnutls
-x86_64-w64-mingw32-strip $INSTALL_PATH/wget-gnutls/wget.exe
+$MINGW_STRIP_TOOL $INSTALL_PATH/wget-gnutls/wget.exe
 # -----------------------------------------------------------------------------
 # build wget (openssl)
 # -----------------------------------------------------------------------------
 make clean
 cp ../../windows-openssl.diff .
 patch src/openssl.c < windows-openssl.diff
-CFLAGS="-I$INSTALL_PATH/include -DCARES_STATICLIB=1 -DPCRE2_STATIC=1 -DNDEBUG -O2 -march=x86-64 -mtune=generic" \
+CFLAGS="-I$INSTALL_PATH/include -DCARES_STATICLIB=1 -DPCRE2_STATIC=1 -DNDEBUG -O2 -march=$WGET_ARCH -mtune=generic" \
  LDFLAGS="-L$INSTALL_PATH/lib -static -static-libgcc" \
  OPENSSL_CFLAGS=$CFLAGS \
  OPENSSL_LIBS="-L$INSTALL_PATH/lib -lcrypto -lssl" \
@@ -403,7 +406,7 @@ CFLAGS="-I$INSTALL_PATH/include -DCARES_STATICLIB=1 -DPCRE2_STATIC=1 -DNDEBUG -O
  METALINK_LIBS="-L$INSTALL_PATH/lib -lmetalink -lexpat" \
  LIBS="-L$INSTALL_PATH/lib -lidn2 -lpsl -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lcrypto -lssl -lz -lcrypt32" \
  ./configure \
- --host=x86_64-w64-mingw32 \
+ --host=$WGET_MINGW_HOST \
  --prefix=$INSTALL_PATH \
  --disable-debug \
  --disable-valgrind-tests \
@@ -424,4 +427,4 @@ make install
 (($? != 0)) && { printf '%s\n' "[wget openssl] make install"; exit 1; }
 mkdir $INSTALL_PATH/wget-openssl
 cp $INSTALL_PATH/bin/wget.exe $INSTALL_PATH/wget-openssl
-x86_64-w64-mingw32-strip $INSTALL_PATH/wget-openssl/wget.exe
+MINGW_STRIP_TOOL $INSTALL_PATH/wget-openssl/wget.exe
