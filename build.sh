@@ -427,4 +427,4 @@ make install
 (($? != 0)) && { printf '%s\n' "[wget openssl] make install"; exit 1; }
 mkdir $INSTALL_PATH/wget-openssl
 cp $INSTALL_PATH/bin/wget.exe $INSTALL_PATH/wget-openssl
-MINGW_STRIP_TOOL $INSTALL_PATH/wget-openssl/wget.exe
+$MINGW_STRIP_TOOL $INSTALL_PATH/wget-openssl/wget.exe
