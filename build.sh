@@ -10,7 +10,7 @@ mkdir install
 export INSTALL_PATH=$PWD/install
 export WGET_MINGW_HOST=x86_64-w64-mingw32
 export WGET_ARCH=x86-64
-export MINGW_STRIP_TOOL=x86_64-w64-mingw32-strip
+export MINGW_STRIP_TOOL=/usr/bin/x86_64-w64-mingw32-strip
 # -----------------------------------------------------------------------------
 # build gmp
 # -----------------------------------------------------------------------------
