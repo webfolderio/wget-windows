@@ -363,7 +363,7 @@ CFLAGS="-I$INSTALL_PATH/include -D_WIN32_WINNT=0x601 -DGNUTLS_INTERNAL_BUILD=1 -
  PCRE2_LIBS="-L$INSTALL_PATH/lib -lpcre2-8"  \
  METALINK_CFLAGS="-I$INSTALL_PATH/include" \
  METALINK_LIBS="-L$INSTALL_PATH/lib -lmetalink -lexpat" \
- LIBS="-L$INSTALL_PATH/lib -lhogweed -lnettle -lgmp -ltasn1 -lidn2 -lpsl -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lz -lcrypt32" \
+ LIBS="-L$INSTALL_PATH/lib -lbcrypt -lhogweed -lnettle -lgmp -ltasn1 -lidn2 -lpsl -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lz -lcrypt32" \
  ./configure \
  --host=$WGET_MINGW_HOST \
  --prefix=$INSTALL_PATH \
