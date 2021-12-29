@@ -12,10 +12,11 @@ jobs:
         name: Checkout project
       - name: Install prerequisites
         run: |
-          sudo apt-get install -y mingw-w64-i686-dev mingw-w64-tools
+          sudo apt-get install -y mingw-w64-i686-dev mingw-w64-tools mingw-w64
           sudo apt-get install -y make m4 pkg-config automake gettext
       - name: Build wget 32-bit
         run: |
+          i686-w64-mingw32-gcc --version
           ./build-x86.sh
       - name: Archive library gnutls
         uses: actions/upload-artifact@v1
