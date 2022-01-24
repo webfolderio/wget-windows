@@ -10,28 +10,28 @@ so it may easily be called from scripts, cron jobs and terminals.
 
 ## Download
 
-__This build use GnuTLS 3.6.15__
+__This build use GnuTLS 3.7.2__
 
-7[wget-1.21.2-64bit-GnuTLS.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.2/wget-1.21.2-64bit-GnuTLS.zip) - 2,47 MB
+[wget-1.21.2-64bit-GnuTLS.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.2/wget-1.21.2-64bit-GnuTLS.zip) - 2,68 MB
 
-__This build use OpenSSL 1.1.1j__
+__This build use OpenSSL 1.1.1m__
 
-[wget-1.21.2-64bit-OpenSSL.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.2/wget-1.21.2-64bit-OpenSSL.zip) - 2,90 MB
+[wget-1.21.2-64bit-OpenSSL.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.2/wget-1.21.2-64bit-OpenSSL.zip) - 2,81 MB
 
 __Both of the builds are for only 64 bit OS (Windows 7/Windows 8/Windows 10)__
 
 File checksums for *wget-1.21.2-64bit-GnuTLS.zip*:
 
-SHA1: `61d31ee82bec32dc0919c2c25b1e5efb4b7e095a`
+SHA1: `57154384c4341dfcd75ed7925fa7dfba72384030`
 
-MD5: `8d475d03913a6548e7f59acbbb22552e`
+MD5: `9695003d65440ad30badd0f38eec54c9`
 
 
 File checksums for *wget-1.21.2-64bit-OpenSSL.zip*:
 
-SHA1: `29487581ac03dd2272ee996e6fd2851fa529795b`
+SHA1: `10247c39baeecb10c002d658f9f427451dbd18d9`
 
-MD5: `0c6bd2e48ce07418bd486b403713f3bb`
+MD5: `548bda13ad5882b5fbf6caa05150189a`
 
 ## How to use wget
 
@@ -101,15 +101,15 @@ zlib          | 1.2.11  |
 
 Antivirus scan report (GnuTLS):
 
-[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/xw6rznz7js)
+[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/l0d6nevv4k,qzafdqeluk)
 
-[VirusTotal Scan Results](https://www.virustotal.com/gui/url/f1dfd1ccec602dbddba570a5e0ff27bc86fbc2b2e261b5f32013549f10f38840/detection)
+[VirusTotal Scan Results](https://www.virustotal.com/gui/file/6eadddd5e637ef55181557571db1ca4d6ce18346d88cee0bba28b09ee266dc07)
 
 Antivirus scan report (OpenSSL):
 
-[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/uiw0zh2xka)
+[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/qzafdqeluk)
 
-[VirusTotal Scan Results](https://www.virustotal.com/gui/file/399069ab649ab2ee4f15f8eb50f561c7179d1c5e28f1c1988ca4138e98d2e2fa?nocache=1)
+[VirusTotal Scan Results](https://www.virustotal.com/gui/file/00eb92692fc50fc15636123a288da6581870316d25496f73ac4b3977fd186033)
 
 
 ### Notes
