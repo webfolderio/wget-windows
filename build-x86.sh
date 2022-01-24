@@ -349,7 +349,7 @@ if [ ! -f $INSTALL_PATH/lib/libz.a ]; then
   wget https://zlib.net/zlib-1.2.11.tar.gz
   tar -xf zlib-1.2.11.tar.gz
   cd zlib-1.2.11
-  CC=i686-w64-mingw32-gcc ./configure -arch i386 --static --prefix=$INSTALL_PATH
+  CC="i686-w64-mingw32-gcc -m32 -march=i686" ./configure --static --prefix=$INSTALL_PATH
   (($? != 0)) && { printf '%s\n' "[zlib] configure failed"; exit 1; }
   make
   (($? != 0)) && { printf '%s\n' "[zlib] make failed"; exit 1; }
