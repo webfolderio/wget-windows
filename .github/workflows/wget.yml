@@ -18,12 +18,12 @@ jobs:
         run: |
           x86_64-w64-mingw32-gcc --version
           ./build.sh
-      - name: Archive library gnutls
+      - name: Archive gnutls
         uses: actions/upload-artifact@v1
         with:
           name: wget-1.21.2-64bit-GnuTLS
           path: build-wget-webfolder.io/install/wget-gnutls/wget.exe
-      - name: Archive library openssl
+      - name: Archive openssl
         uses: actions/upload-artifact@v1
         with:
           name: wget-1.21.2-64bit-OpenSSL
