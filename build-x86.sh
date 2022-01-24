@@ -365,20 +365,21 @@ if [ ! -f $INSTALL_PATH/lib/libssl.a ]; then
   tar -xf openssl-1.1.1m.tar.gz
   cd openssl-1.1.1m
   ./Configure \
+  -m32 \
   --static \
   -static \
   --prefix=$INSTALL_PATH \
-  --cross-compile-prefix=x86_64-w64-mingw32-mingw64 \
+  --cross-compile-prefix=i686-w64-mingw32- \
+  mingw \
   no-shared \
   enable-asm \
   no-tests \
   --with-zlib-include=$INSTALL_PATH \
   --with-zlib-lib=$INSTALL_PATH/lib/libz.a
- make
- make install_sw
- cd ..
-fi
-# -----------------------------------------------------------------------------
+  make
+  make install_sw
+cd ..
+fi# -----------------------------------------------------------------------------
 # build wget (gnuTLS)
 # -----------------------------------------------------------------------------
 wget https://ftp.gnu.org/gnu/wget/wget-1.21.2.tar.gz
