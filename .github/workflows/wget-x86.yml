@@ -22,9 +22,9 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: wget-1.21.2-32bit-GnuTLS
-          path: build-wget-webfolder.io-x86/install/wget-gnutls/wget.exe
+          path: build-wget-webfolder-x86.io/install/wget-gnutls/wget.exe
       - name: Archive openssl (x86)
         uses: actions/upload-artifact@v1
         with:
           name: wget-1.21.2-32bit-OpenSSL
-          path: build-wget-webfolder.io-x86/install/wget-openssl/wget.exe
+          path: build-wget-webfolder-x86.io/install/wget-openssl/wget.exe
