@@ -85,7 +85,7 @@ libiconv      | 1.16    |
 pcre2         | 10.39   |
 libgpg-error  | 1.43    |
 libassuan     | 2.5.5   |
-gpgme         | 1.15.1  |
+gpgme         | 1.16.0  |
 expat         | 2.4.2   |
 libmetalink   | 0.1.3   |
 zlib          | 1.2.11  |
@@ -103,7 +103,7 @@ libiconv      | 1.16    |
 pcre2         | 10.39   |
 libgpg-error  | 1.43    |
 libassuan     | 2.5.5   |
-gpgme         | 1.15.1  |
+gpgme         | 1.16.0  |
 expat         | 2.4.2   |
 libmetalink   | 0.1.3   |
 zlib          | 1.2.11  |
