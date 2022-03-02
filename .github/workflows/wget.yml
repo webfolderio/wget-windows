@@ -21,10 +21,10 @@ jobs:
       - name: Archive gnutls
         uses: actions/upload-artifact@v1
         with:
-          name: wget-1.21.2-64bit-GnuTLS
+          name: wget-1.21.3-64bit-GnuTLS
           path: build-wget-webfolder.io/install/wget-gnutls/wget.exe
       - name: Archive openssl
         uses: actions/upload-artifact@v1
         with:
-          name: wget-1.21.2-64bit-OpenSSL
+          name: wget-1.21.3-64bit-OpenSSL
           path: build-wget-webfolder.io/install/wget-openssl/wget.exe

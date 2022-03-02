@@ -383,9 +383,9 @@ fi
 # -----------------------------------------------------------------------------
 # build wget (gnuTLS)
 # -----------------------------------------------------------------------------
-wget https://ftp.gnu.org/gnu/wget/wget-1.21.2.tar.gz
-tar -xf wget-1.21.2.tar.gz
-cd wget-1.21.2
+wget https://ftp.gnu.org/gnu/wget/wget-1.21.3.tar.gz
+tar -xf wget-1.21.3.tar.gz
+cd wget-1.21.3
 CFLAGS="-I$INSTALL_PATH/include -D_WIN32_WINNT=0x601 -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -DPCRE2_STATIC=1 -DNDEBUG -O2 -march=$WGET_ARCH -mtune=generic" \
  LDFLAGS="-L$INSTALL_PATH/lib -static -static-libgcc" \
  GNUTLS_CFLAGS=$CFLAGS \
