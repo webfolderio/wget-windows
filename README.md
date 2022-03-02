@@ -1,4 +1,4 @@
-# Windows binaries of GNU Wget 1.21.2
+# Windows binaries of GNU Wget 1.21.3
 
 [![wget](https://github.com/webfolderio/wget-windows/actions/workflows/wget.yml/badge.svg)](https://github.com/webfolderio/wget-windows/actions/workflows/wget.yml)
 
@@ -12,37 +12,37 @@ so it may easily be called from scripts, cron jobs and terminals.
 
 __This build use GnuTLS 3.7.2__ (X64)
 
-[wget-1.21.2-64bit-GnuTLS.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.2/wget-1.21.2-64bit-GnuTLS.zip) - 2,68 MB
+[wget-1.21.3-64bit-GnuTLS.zip](https://github.com/webfolderio/wget-windows/releases/download/v1.21.3/wget-1.21.3-64bit-GnuTLS.zip) - 2,68 MB
 
 __This build use OpenSSL 1.1.1m__ (x64)
 
-[wget-1.21.2-64bit-OpenSSL.zip](https://github.com/webfolderio/wget-windows/releases/download/1.21.2/wget-1.21.2-64bit-OpenSSL.zip) - 2,81 MB
+[wget-1.21.3-64bit-OpenSSL.zip](https://github.com/webfolderio/wget-windows/releases/download/v1.21.3/wget-1.21.3-64bit-OpenSSL.zip) - 2,81 MB
 
 __This build use OpenSSL 1.1.1m__ (x32)
 
-[wget-1.21.2-32bit-OpenSSL.zip](https://github.com/webfolderio/wget-windows/releases/download/v1.21.2/wget-1.21.2-32bit-OpenSSL.zip) - 2,60 MB
+[wget-1.21.3-32bit-OpenSSL.zip](https://github.com/webfolderio/wget-windows/releases/download/v1.21.3/wget-1.21.3-32bit-OpenSSL.zip) - 2,60 MB
 
 __Supported OS: Windows 7/Windows 8/Windows 10__
 
-File checksums for *wget-1.21.2-64bit-GnuTLS.zip*:
+File checksums for *wget-1.21.3-64bit-GnuTLS.zip*:
 
-SHA1: `57154384c4341dfcd75ed7925fa7dfba72384030`
+SHA1: `fce5d46be92d288f81c1494210634953e0a53290`
 
-MD5: `9695003d65440ad30badd0f38eec54c9`
-
-
-File checksums for *wget-1.21.2-64bit-OpenSSL.zip*:
-
-SHA1: `10247c39baeecb10c002d658f9f427451dbd18d9`
-
-MD5: `548bda13ad5882b5fbf6caa05150189a`
+MD5: `d779ef7bcf4cc2f4310837bad16aeffe`
 
 
-File checksums for *wget-1.21.2-32bit-OpenSSL.zip*:
+File checksums for *wget-1.21.3-64bit-OpenSSL.zip*:
 
-SHA1: `3ae206709617ecf78201ad5dae648310f48336d2`
+SHA1: `1002fb9a8e49c7a18edbd9fb7492351b835b57f5`
 
-MD5: `4d3fb6f1ae9785f9f698657ed461ea1e`
+MD5: `8d66fa68c7ec2a2c022a7f3f5e4d41a7`
+
+
+File checksums for *wget-1.21.3-32bit-OpenSSL.zip*:
+
+SHA1: `1105d1fcab0e6adf12e58a72bcf5dcab5f881d16`
+
+MD5: `1004eec2acfe2def0aa450259485820a`
 
 ## How to use wget
 
@@ -112,21 +112,21 @@ zlib          | 1.2.11  |
 
 Antivirus scan report (GnuTLS x64):
 
-[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/l0d6nevv4k,qzafdqeluk)
+[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/vm4c1n8lon)
 
-[VirusTotal Scan Results](https://www.virustotal.com/gui/file/6eadddd5e637ef55181557571db1ca4d6ce18346d88cee0bba28b09ee266dc07)
+[VirusTotal Scan Results](https://www.virustotal.com/gui/file/53250e1755ceb7e02d03cbeff793205df1c144a2e283b538e07373b677f038e9)
 
 Antivirus scan report (OpenSSL x64):
 
-[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/qzafdqeluk)
+[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/nfoolk6gbg)
 
-[VirusTotal Scan Results](https://www.virustotal.com/gui/file/00eb92692fc50fc15636123a288da6581870316d25496f73ac4b3977fd186033)
+[VirusTotal Scan Results](https://www.virustotal.com/gui/file/a0cdc3a1e5706e973b776092d3999b056877f6018f5595d03d20dcaa44e92882)
 
 Antivirus scan report (OpenSSL x32):
 
-[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/sldl9sna9a)
+[Jotti Scan Results](https://virusscan.jotti.org/en-US/filescanjob/pgjs2zcfan)
 
-[VirusTotal Scan Results](https://www.virustotal.com/gui/file/029438aa22459998d7f159fce65406d6eb72bb407f89a01769c32e1f805550c0)
+[VirusTotal Scan Results](https://www.virustotal.com/gui/file/1b512b3cd1eb28b1d543ddc3248b3c432b0787d25db3d0d295a482ad3551196b)
 
 
 ### Notes
