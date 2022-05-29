@@ -346,9 +346,9 @@ fi
 # build zlib
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libz.a ]; then
-  wget https://zlib.net/zlib-1.2.11.tar.gz
-  tar -xf zlib-1.2.11.tar.gz
-  cd zlib-1.2.11
+  wget https://zlib.net/zlib-1.2.12.tar.gz
+  tar -xf zlib-1.2.12.tar.gz
+  cd zlib-1.2.12
   CC=x86_64-w64-mingw32-gcc ./configure --64 --static --prefix=$INSTALL_PATH
   (($? != 0)) && { printf '%s\n' "[zlib] configure failed"; exit 1; }
   make
@@ -397,7 +397,7 @@ CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -D
  PCRE2_LIBS="-L$INSTALL_PATH/lib -lpcre2-8"  \
  METALINK_CFLAGS="-I$INSTALL_PATH/include" \
  METALINK_LIBS="-L$INSTALL_PATH/lib -lmetalink -lexpat" \
- LIBS="-L$INSTALL_PATH/lib -lhogweed -lnettle -lgmp -ltasn1 -lidn2 -lpsl -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lz -lcrypt32" \
+ LIBS="-L$INSTALL_PATH/lib -lhogweed -lnettle -lgmp -ltasn1 -lidn2 -lpsl -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lz -lcrypt32 -lpthread" \
  ./configure \
  --host=$WGET_MINGW_HOST \
  --prefix=$INSTALL_PATH \
