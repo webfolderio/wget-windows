@@ -34,9 +34,9 @@ fi
 # build nettle
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libnettle.a ]; then
-  wget https://ftp.gnu.org/gnu/nettle/nettle-3.7.1.tar.gz
-  tar -xf nettle-3.7.1.tar.gz
-  cd nettle-3.7.1
+  wget https://ftp.gnu.org/gnu/nettle/nettle-3.7.3.tar.gz
+  tar -xf nettle-3.7.3.tar.gz
+  cd nettle-3.7.3
   CFLAGS="-I$INSTALL_PATH/include" \
   LDFLAGS="-L$INSTALL_PATH/lib" \
   ./configure \
@@ -74,9 +74,9 @@ fi
 # build idn2
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libidn2.a ]; then
-  wget https://ftp.gnu.org/gnu/libidn/libidn2-2.3.0.tar.gz
-  tar -xf libidn2-2.3.0.tar.gz
-  cd libidn2-2.3.0
+  wget https://ftp.gnu.org/gnu/libidn/libidn2-2.3.2.tar.gz
+  tar -xf libidn2-2.3.2.tar.gz
+  cd libidn2-2.3.2
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
@@ -93,9 +93,9 @@ fi
 # build unistring
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libunistring.a ]; then
-  wget https://ftp.gnu.org/gnu/libunistring/libunistring-0.9.10.tar.gz
-  tar -xf libunistring-0.9.10.tar.gz
-  cd libunistring-0.9.10
+  wget https://ftp.gnu.org/gnu/libunistring/libunistring-1.0.tar.gz
+  tar -xf libunistring-1.0.tar.gz
+  cd libunistring-1.0
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
@@ -111,9 +111,9 @@ fi
 # build gnutls
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libgnutls.a ]; then
-  wget https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.2.tar.xz
-  tar -xf gnutls-3.7.2.tar.xz
-  cd gnutls-3.7.2
+  wget https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.6.tar.xz
+  tar -xf gnutls-3.7.6.tar.xz
+  cd gnutls-3.7.6
   PKG_CONFIG_PATH="$INSTALL_PATH/lib/pkgconfig" \
   CFLAGS="-I$INSTALL_PATH/include" \
   LDFLAGS="-L$INSTALL_PATH/lib" \
@@ -148,9 +148,9 @@ fi
 # build cares
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libcares.a ]; then
-  wget https://github.com/c-ares/c-ares/releases/download/cares-1_17_2/c-ares-1.17.2.tar.gz
-  tar -xf c-ares-1.17.2.tar.gz
-  cd c-ares-1.17.2
+  wget https://github.com/c-ares/c-ares/releases/download/cares-1_18_1/c-ares-1.18.1.tar.gz
+  tar -xf c-ares-1.18.1.tar.gz
+  cd c-ares-1.18.1
   CPPFLAGS="-DCARES_STATICLIB=1" \
   ./configure \
   --host=$WGET_MINGW_HOST \
@@ -170,9 +170,9 @@ fi
 # build iconv
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libiconv.a ]; then
-  wget https://ftp.gnu.org/gnu/libiconv/libiconv-1.16.tar.gz
-  tar -xf libiconv-1.16.tar.gz
-  cd libiconv-1.16
+  wget https://ftp.gnu.org/gnu/libiconv/libiconv-1.17.tar.gz
+  tar -xf libiconv-1.17.tar.gz
+  cd libiconv-1.17
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
@@ -216,9 +216,9 @@ fi
 # build pcre2
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libpcre2-8.a ]; then
-  wget https://github.com/PhilipHazel/pcre2/releases/download/pcre2-10.39/pcre2-10.39.tar.gz
-  tar -xf pcre2-10.39.tar.gz
-  cd pcre2-10.39
+  wget https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.40/pcre2-10.40.tar.gz
+  tar -xf pcre2-10.40.tar.gz
+  cd pcre2-10.40
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
@@ -235,9 +235,9 @@ fi
 # build gpg-error
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libgpg-error.a ]; then
-  wget https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.43.tar.gz
-  tar -xf libgpg-error-1.43.tar.gz
-  cd libgpg-error-1.43
+  wget https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.45.tar.gz
+  tar -xf libgpg-error-1.45.tar.gz
+  cd libgpg-error-1.45
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
@@ -276,9 +276,9 @@ fi
 # build gpgme
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libgpgme.a ]; then
-  wget https://gnupg.org/ftp/gcrypt/gpgme/gpgme-1.16.0.tar.bz2
-  tar -xf gpgme-1.16.0.tar.bz2
-  cd gpgme-1.16.0
+  wget https://gnupg.org/ftp/gcrypt/gpgme/gpgme-1.17.1.tar.bz2
+  tar -xf gpgme-1.17.1.tar.bz2
+  cd gpgme-1.17.1
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
@@ -302,9 +302,9 @@ fi
 # build expat
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libexpat.a ]; then
-  wget https://github.com/libexpat/libexpat/releases/download/R_2_4_2/expat-2.4.2.tar.gz
-  tar -xf expat-2.4.2.tar.gz
-  cd expat-2.4.2
+  wget https://github.com/libexpat/libexpat/releases/download/R_2_4_8/expat-2.4.8.tar.gz
+  tar -xf expat-2.4.8.tar.gz
+  cd expat-2.4.8
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
@@ -362,9 +362,9 @@ fi
 # build openssl
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libssl.a ]; then
-  wget https://www.openssl.org/source/openssl-1.1.1m.tar.gz
-  tar -xf openssl-1.1.1m.tar.gz
-  cd openssl-1.1.1m
+  wget https://www.openssl.org/source/openssl-1.1.1o.tar.gz
+  tar -xf openssl-1.1.1o.tar.gz
+  cd openssl-1.1.1o
   ./Configure \
   --static \
   -static \
