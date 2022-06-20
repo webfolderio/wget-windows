@@ -43,7 +43,7 @@ OpenSSL version:
 
 `+cares +digest +gpgme +https +ipv6 +iri +large-file +metalink -nls +ntlm +opie +psl +ssl/openssl`
 
-### Staticly Linked Libraries (GnuTLS version)
+### Staticly Linked Libraries
 
 | library       | GnuTLS based version | OpenSSL based version |
 |---------------| ---------------------|-----------------------|
