@@ -383,7 +383,7 @@ fi
 # -----------------------------------------------------------------------------
 # build wget (gnuTLS)
 # -----------------------------------------------------------------------------
-wget https://ftp.gnu.org/gnu/wget/wget-1.21.3.tar.gz
+wget -nc https://ftp.gnu.org/gnu/wget/wget-1.21.3.tar.gz
 tar -xf wget-1.21.3.tar.gz
 cd wget-1.21.3
 CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -DPCRE2_STATIC=1 -DNDEBUG -O2 -march=$WGET_ARCH -mtune=generic" \
