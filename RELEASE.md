@@ -3,7 +3,7 @@ GNU Wget 1.21.3 for Windows
 | library       | GnuTLS based version | OpenSSL based version |
 |---------------| ---------------------|-----------------------|
 | gnutls        | 3.7.6                | n/a                   |
-| openssl       | n/a                  | 1.1.1m                |
+| openssl       | n/a                  | 1.1.1o                |
 | gmp           | 6.2.1                | n/a                   |
 | nettle        | 3.7.3                | n/a                   |
 | libtasn1      | 4.18                 | n/a                   |
