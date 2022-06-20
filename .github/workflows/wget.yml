@@ -48,6 +48,6 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          artifacts: "build-wget-webfolder.io/install/wget-gnutls/wget.exe,build-wget-webfolder.io/install/wget-openssl/wget.exe,build-wget-webfolder-x86.io/install/wget-openssl/wget.exe"
+          artifacts: "build-wget-webfolder.io/install/wget-gnutls/wget-gnutls-x64.exe,build-wget-webfolder.io/install/wget-openssl/wget-openssl-x64.exe,build-wget-webfolder-x86.io/install/wget-openssl/wget-openssl-x86.exe"
           bodyFile: "RELEASE.md"
           token: ${{ secrets.TOKEN }}
