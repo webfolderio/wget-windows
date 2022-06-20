@@ -71,25 +71,25 @@ OpenSSL version:
 
 ### Staticly Linked Libraries (GnuTLS version)
 
-library       | GnuTLS based version | GnuTLS based version |
---------------| ---------------------|----------------------|
-gmp           | 6.2.1                | n/a                  |
-nettle        | 3.7.1                | n/a                  |
-libtasn1      | 4.16                 | n/a                  |
-libidn2       | 2.3.0                | 2.3.0                |
-libunistring  | 0.9.10               | 0.9.10               |
-gnutls        | 3.7.2                | n/a                  |
-cares         | 1.17.2               | 1.17.2               |
-libpsl        | 0.21.1               | 0.21.1               |
-libiconv      | 1.16                 | 1.16                 |
-pcre2         | 10.39                | 10.39                |
-libgpg-error  | 1.43                 | 1.43                 |
-libassuan     | 2.5.5                | 2.5.5                |
-gpgme         | 1.16.0               | 1.16.0               |
-expat         | 2.4.2                | 2.4.2                |
-libmetalink   | 0.1.3                | 0.1.3                |
-zlib          | 1.2.11               | 1.2.11               |
-openssl       | n/a                  | 1.1.1m               |
+library       | GnuTLS based version | OpenSSL based version |
+--------------| ---------------------|-----------------------|
+gnutls        | 3.7.2                | n/a                   |
+openssl       | n/a                  | 1.1.1m                |
+gmp           | 6.2.1                | n/a                   |
+nettle        | 3.7.1                | n/a                   |
+libtasn1      | 4.16                 | n/a                   |
+libidn2       | 2.3.0                | 2.3.0                 |
+libunistring  | 0.9.10               | 0.9.10                |
+cares         | 1.17.2               | 1.17.2                |
+libpsl        | 0.21.1               | 0.21.1                |
+libiconv      | 1.16                 | 1.16                  |
+pcre2         | 10.39                | 10.39                 |
+libgpg-error  | 1.43                 | 1.43                  |
+libassuan     | 2.5.5                | 2.5.5                 |
+gpgme         | 1.16.0               | 1.16.0                |
+expat         | 2.4.2                | 2.4.2                 |
+libmetalink   | 0.1.3                | 0.1.3                 |
+zlib          | 1.2.11               | 1.2.11                |
 
 ### Virus Scan Results
 
