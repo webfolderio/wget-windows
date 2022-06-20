@@ -420,9 +420,8 @@ make
 make install
 (($? != 0)) && { printf '%s\n' "[wget gnutls] make install"; exit 1; }
 mkdir $INSTALL_PATH/wget-gnutls
-cp $INSTALL_PATH/bin/wget.exe $INSTALL_PATH/wget-gnutls
 cp $INSTALL_PATH/bin/wget.exe $INSTALL_PATH/wget-gnutls/wget-gnutls-x64.exe
-$MINGW_STRIP_TOOL $INSTALL_PATH/wget-gnutls/wget.exe
+$MINGW_STRIP_TOOL $INSTALL_PATH/wget-gnutls/wget-gnutls-x64.exe
 # -----------------------------------------------------------------------------
 # build wget (openssl)
 # -----------------------------------------------------------------------------
@@ -463,6 +462,5 @@ make
 make install
 (($? != 0)) && { printf '%s\n' "[wget openssl] make install"; exit 1; }
 mkdir $INSTALL_PATH/wget-openssl
-cp $INSTALL_PATH/bin/wget.exe $INSTALL_PATH/wget-openssl
 cp $INSTALL_PATH/bin/wget.exe $INSTALL_PATH/wget-openssl/wget-openssl-x64.exe
-$MINGW_STRIP_TOOL $INSTALL_PATH/wget-openssl/wget.exe
+$MINGW_STRIP_TOOL $INSTALL_PATH/wget-openssl/wget-openssl-x64.exe
