@@ -4,6 +4,7 @@
 # https://webfolder.io
 # March 15, 2021
 #
+if [ -z ${CC+x} ]; then export CC="x86_64-w64-mingw32-gcc"; fi
 mkdir build-wget-webfolder.io
 cd build-wget-webfolder.io
 mkdir install
@@ -349,7 +350,7 @@ if [ ! -f $INSTALL_PATH/lib/libz.a ]; then
   wget https://zlib.net/zlib-1.2.12.tar.gz
   tar -xf zlib-1.2.12.tar.gz
   cd zlib-1.2.12
-  CC=x86_64-w64-mingw32-gcc ./configure --64 --static --prefix=$INSTALL_PATH
+  ./configure --64 --static --prefix=$INSTALL_PATH
   (($? != 0)) && { printf '%s\n' "[zlib] configure failed"; exit 1; }
   make
   (($? != 0)) && { printf '%s\n' "[zlib] make failed"; exit 1; }
