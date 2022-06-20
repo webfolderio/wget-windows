@@ -16,7 +16,7 @@ export MINGW_STRIP_TOOL=x86_64-w64-mingw32-strip
 # build gmp
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libgmp.a ]; then
-  wget https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz
+  wget -nc https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz
   tar -xf gmp-6.2.1.tar.xz
   cd gmp-6.2.1
   ./configure \
@@ -34,7 +34,7 @@ fi
 # build nettle
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libnettle.a ]; then
-  wget https://ftp.gnu.org/gnu/nettle/nettle-3.7.3.tar.gz
+  wget -nc https://ftp.gnu.org/gnu/nettle/nettle-3.7.3.tar.gz
   tar -xf nettle-3.7.3.tar.gz
   cd nettle-3.7.3
   CFLAGS="-I$INSTALL_PATH/include" \
@@ -55,7 +55,7 @@ fi
 # build tasn
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libtasn1.a ]; then
-  wget https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.18.0.tar.gz
+  wget -nc https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.18.0.tar.gz
   tar -xf libtasn1-4.18.0.tar.gz
   cd libtasn1-4.18.0
   ./configure \
@@ -74,7 +74,7 @@ fi
 # build idn2
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libidn2.a ]; then
-  wget https://ftp.gnu.org/gnu/libidn/libidn2-2.3.2.tar.gz
+  wget -nc https://ftp.gnu.org/gnu/libidn/libidn2-2.3.2.tar.gz
   tar -xf libidn2-2.3.2.tar.gz
   cd libidn2-2.3.2
   ./configure \
@@ -93,7 +93,7 @@ fi
 # build unistring
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libunistring.a ]; then
-  wget https://ftp.gnu.org/gnu/libunistring/libunistring-1.0.tar.gz
+  wget -nc https://ftp.gnu.org/gnu/libunistring/libunistring-1.0.tar.gz
   tar -xf libunistring-1.0.tar.gz
   cd libunistring-1.0
   ./configure \
@@ -111,7 +111,7 @@ fi
 # build gnutls
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libgnutls.a ]; then
-  wget https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.6.tar.xz
+  wget -nc https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.6.tar.xz
   tar -xf gnutls-3.7.6.tar.xz
   cd gnutls-3.7.6
   PKG_CONFIG_PATH="$INSTALL_PATH/lib/pkgconfig" \
@@ -148,7 +148,7 @@ fi
 # build cares
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libcares.a ]; then
-  wget https://github.com/c-ares/c-ares/releases/download/cares-1_18_1/c-ares-1.18.1.tar.gz
+  wget -nc https://github.com/c-ares/c-ares/releases/download/cares-1_18_1/c-ares-1.18.1.tar.gz
   tar -xf c-ares-1.18.1.tar.gz
   cd c-ares-1.18.1
   CPPFLAGS="-DCARES_STATICLIB=1" \
@@ -170,7 +170,7 @@ fi
 # build iconv
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libiconv.a ]; then
-  wget https://ftp.gnu.org/gnu/libiconv/libiconv-1.17.tar.gz
+  wget -nc https://ftp.gnu.org/gnu/libiconv/libiconv-1.17.tar.gz
   tar -xf libiconv-1.17.tar.gz
   cd libiconv-1.17
   ./configure \
@@ -189,7 +189,7 @@ fi
 # build psl
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libpsl.a ]; then
-  wget https://github.com/rockdaboot/libpsl/releases/download/0.21.1/libpsl-0.21.1.tar.gz
+  wget -nc https://github.com/rockdaboot/libpsl/releases/download/0.21.1/libpsl-0.21.1.tar.gz
   tar -xf libpsl-0.21.1.tar.gz
   cd libpsl-0.21.1
   CFLAGS="-I$INSTALL_PATH/include" \
@@ -216,7 +216,7 @@ fi
 # build pcre2
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libpcre2-8.a ]; then
-  wget https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.40/pcre2-10.40.tar.gz
+  wget -nc https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.40/pcre2-10.40.tar.gz
   tar -xf pcre2-10.40.tar.gz
   cd pcre2-10.40
   ./configure \
@@ -235,7 +235,7 @@ fi
 # build gpg-error
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libgpg-error.a ]; then
-  wget https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.45.tar.gz
+  wget -nc https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.45.tar.gz
   tar -xf libgpg-error-1.45.tar.gz
   cd libgpg-error-1.45
   ./configure \
@@ -255,7 +255,7 @@ fi
 # build assuan
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libassuan.a ]; then
-  wget https://gnupg.org/ftp/gcrypt/libassuan/libassuan-2.5.5.tar.bz2
+  wget -nc https://gnupg.org/ftp/gcrypt/libassuan/libassuan-2.5.5.tar.bz2
   tar -xf libassuan-2.5.5.tar.bz2
   cd libassuan-2.5.5
   ./configure \
@@ -276,7 +276,7 @@ fi
 # build gpgme
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libgpgme.a ]; then
-  wget https://gnupg.org/ftp/gcrypt/gpgme/gpgme-1.17.1.tar.bz2
+  wget -nc https://gnupg.org/ftp/gcrypt/gpgme/gpgme-1.17.1.tar.bz2
   tar -xf gpgme-1.17.1.tar.bz2
   cd gpgme-1.17.1
   ./configure \
@@ -302,7 +302,7 @@ fi
 # build expat
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libexpat.a ]; then
-  wget https://github.com/libexpat/libexpat/releases/download/R_2_4_8/expat-2.4.8.tar.gz
+  wget -nc https://github.com/libexpat/libexpat/releases/download/R_2_4_8/expat-2.4.8.tar.gz
   tar -xf expat-2.4.8.tar.gz
   cd expat-2.4.8
   ./configure \
@@ -324,7 +324,7 @@ fi
 # build metalink
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libmetalink.a ]; then
-  wget https://github.com/metalink-dev/libmetalink/releases/download/release-0.1.3/libmetalink-0.1.3.tar.gz
+  wget -nc https://github.com/metalink-dev/libmetalink/releases/download/release-0.1.3/libmetalink-0.1.3.tar.gz
   tar -xf libmetalink-0.1.3.tar.gz
   cd libmetalink-0.1.3
   EXPAT_CFLAGS="-I$INSTALL_PATH/include" \
@@ -347,7 +347,7 @@ fi
 # build zlib
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libz.a ]; then
-  wget https://zlib.net/zlib-1.2.12.tar.gz
+  wget -nc https://zlib.net/zlib-1.2.12.tar.gz
   tar -xf zlib-1.2.12.tar.gz
   cd zlib-1.2.12
   CC=$WGET_GCC ./configure --64 --static --prefix=$INSTALL_PATH
@@ -362,7 +362,7 @@ fi
 # build openssl
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libssl.a ]; then
-  wget https://www.openssl.org/source/openssl-1.1.1o.tar.gz
+  wget -nc https://www.openssl.org/source/openssl-1.1.1o.tar.gz
   tar -xf openssl-1.1.1o.tar.gz
   cd openssl-1.1.1o
   ./Configure \
