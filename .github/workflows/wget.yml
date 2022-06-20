@@ -12,12 +12,16 @@ jobs:
         name: Checkout project
       - name: Install prerequisites
         run: |
-          sudo apt-get install -y mingw-w64 mingw-w64-tools
+          sudo apt-get install -y mingw-w64 mingw-w64-tools mingw-w64-i686-dev
           sudo apt-get install -y make m4 pkg-config automake gettext
       - name: Build wget 64-bit
         run: |
           x86_64-w64-mingw32-gcc --version
           ./build.sh
+      - name: Build wget 32-bit
+        run: |
+          i686-w64-mingw32-gcc --version
+          ./build-x86.sh
       - name: Archive gnutls
         uses: actions/upload-artifact@v1
         with:
@@ -28,3 +32,13 @@ jobs:
         with:
           name: wget-1.21.3-64bit-OpenSSL
           path: build-wget-webfolder.io/install/wget-openssl/wget.exe
+      - name: Archive gnutls (x86)
+        uses: actions/upload-artifact@v1
+        with:
+          name: wget-1.21.3-32bit-GnuTLS
+          path: build-wget-webfolder-x86.io/install/wget-gnutls/wget.exe
+      - name: Archive openssl (x86)
+        uses: actions/upload-artifact@v1
+        with:
+          name: wget-1.21.3-32bit-OpenSSL
+          path: build-wget-webfolder-x86.io/install/wget-openssl/wget.exe
