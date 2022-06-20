@@ -7,9 +7,9 @@ GNU Wget 1.21.3 for Windows
 | gmp           | 6.2.1                | n/a                   |
 | nettle        | 3.7.3                | n/a                   |
 | libtasn1      | 4.18                 | n/a                   |
-| libidn2       | 2.3.0                | 2.3.0                 |
+| libidn2       | 2.3.2                | 2.3.2                 |
 | libunistring  | 1.0                  | 1.0                   |
-| cares         | 1.17.2               | 1.17.2                |
+| cares         | 1.18.1               | 1.18.1                |
 | libpsl        | 0.21.1               | 0.21.1                |
 | libiconv      | 1.17                 | 1.17                  |
 | pcre2         | 10.40                | 10.40                 |
