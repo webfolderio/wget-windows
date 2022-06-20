@@ -1,7 +1,10 @@
 name: wget
 
-on:
-  [push]
+on: 
+  push:
+    tags:
+    - '*'
+
 jobs:
   ubuntu:
     name: ubuntu
@@ -42,3 +45,9 @@ jobs:
         with:
           name: wget-1.21.3-32bit-OpenSSL
           path: build-wget-webfolder-x86.io/install/wget-openssl/wget.exe
+      - uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true
+          artifacts: "build-wget-webfolder.io/install/wget-gnutls/wget.exe,build-wget-webfolder.io/install/wget-openssl/wget.exe,build-wget-webfolder-x86.io/install/wget-openssl/wget.exe"
+          bodyFile: "RELEASE.md"
+          token: ${{ secrets.TOKEN }}
