@@ -1,15 +1,14 @@
 name: wget
 
-on: 
-  push:
+on:
+  create:
     tags:
-    - '*'
+      - v*
 
 jobs:
   ubuntu:
     name: ubuntu
     runs-on: ubuntu-20.04
-    if: "contains(toJSON(github.event.commits.*.message), '[build wget]')"
     steps:
       - uses: actions/checkout@v2
         name: Checkout project
