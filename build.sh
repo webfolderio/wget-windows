@@ -74,9 +74,9 @@ fi
 # build idn2
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libidn2.a ]; then
-  wget -nc https://ftp.gnu.org/gnu/libidn/libidn2-2.3.3.tar.gz
-  tar -xf libidn2-2.3.3.tar.gz
-  cd libidn2-2.3.3
+  wget -nc https://ftp.gnu.org/gnu/libidn/libidn2-2.3.0.tar.gz
+  tar -xf libidn2-2.3.0.tar.gz
+  cd libidn2-2.3.0
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
@@ -148,9 +148,9 @@ fi
 # build cares
 # -----------------------------------------------------------------------------
 if [ ! -f $INSTALL_PATH/lib/libcares.a ]; then
-  wget -nc https://github.com/c-ares/c-ares/releases/download/cares-1_18_1/c-ares-1.18.1.tar.gz
-  tar -xf c-ares-1.18.1.tar.gz
-  cd c-ares-1.18.1
+  wget -nc https://github.com/c-ares/c-ares/releases/download/cares-1_17_2/c-ares-1.17.2.tar.gz
+  tar -xf c-ares-1.17.2.tar.gz
+  cd c-ares-1.17.2
   CPPFLAGS="-DCARES_STATICLIB=1" \
   ./configure \
   --host=$WGET_MINGW_HOST \
