@@ -33,6 +33,19 @@ OpenSSL version:
 
 `+cares +digest +gpgme +https +ipv6 +iri +large-file +metalink -nls +ntlm +opie +psl +ssl/openssl`
 
+### Local Build
+
+Follow these steps to build wget for windows on WSL 1 or 2 (Debian/Ubuntu).
+
+```bash
+sudo apt-get install -y mingw-w64 mingw-w64-tools mingw-w64-i686-dev gcc
+sudo apt-get install -y make m4 pkg-config automake gettext
+cd /tmp
+git clone https://github.com/webfolderio/wget-windows.git
+cd wget-windows
+./build.sh
+```
+
 ### Notes
 
 Project sponsored by [WebFolder](https://webfolder.io)
