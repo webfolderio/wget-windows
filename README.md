@@ -2,28 +2,28 @@
 
 [![wget](https://github.com/webfolderio/wget-windows/actions/workflows/wget.yml/badge.svg)](https://github.com/webfolderio/wget-windows/actions/workflows/wget.yml)
 
-A command-line utility for retrieving files using HTTP, HTTPS and FTP protocols.
+This is a command-line tool that can be used to retrieve files via the HTTP, HTTPS, and FTP protocols.
 
-GNU Wget is a free software package for retrieving files using HTTP, HTTPS, FTP
-and FTPS the most widely-used Internet protocols. It is a non-interactive commandline tool,
-so it may easily be called from scripts, cron jobs and terminals.
+GNU Wget is a free software package that allows users to retrieve files through the most commonly used Internet protocols,
+including HTTP, HTTPS, FTP, and FTPS. As a non-interactive command-line tool,
+it can be easily integrated into scripts, cron jobs, and terminals.
 
 ## How to use wget
 
-Please read the official GNU Wget manual from the below link.
+You can access the official GNU Wget manual by clicking on the link below.
 
 [https://www.gnu.org/software/wget/manual/wget.html](https://www.gnu.org/software/wget/manual/wget.html)
 
 ### Build Environment
 
-wget is built on GitHub Actions and cross compiled with mingw64 (Ubuntu & GNU/gcc 9.3). It's virus-free and safe to use.
+Wget has been built using GitHub Actions and cross-compiled with mingw64 on Ubuntu, using GNU/gcc 9.3.
+It is completely safe to use and free from viruses.
 
-All required libraries is **statically linked**, and it's not necessary to use third-party DLL.
-
+All the necessary libraries have been **statically linked**, so there is no need to use any third-party DLL.
 
 ### Wget features
 
-Wget windows bundled with all wget features except nls (multi-lang version).
+The Windows version of Wget includes all features of Wget except for NLS (the multi-language version).
 
 GnuTLS version:
 
@@ -35,7 +35,7 @@ OpenSSL version:
 
 ### Local Build
 
-Follow these steps to build wget for windows on WSL 1 or 2 (Debian/Ubuntu).
+To build Wget for Windows on WSL 1 or 2 (Debian/Ubuntu), please follow these steps.
 
 ```bash
 sudo apt-get install -y mingw-w64 mingw-w64-tools mingw-w64-i686-dev gcc
