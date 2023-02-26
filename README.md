@@ -10,7 +10,7 @@ it can be easily integrated into scripts, cron jobs, and terminals.
 
 ## How to use wget
 
-You can access the official GNU Wget manual by clicking on the link below.
+To learn how to use Wget, please refer to the official GNU Wget manual by clicking the link below.
 
 [https://www.gnu.org/software/wget/manual/wget.html](https://www.gnu.org/software/wget/manual/wget.html)
 
