@@ -55,9 +55,9 @@ fi
 # build tasn
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libtasn1.a ]; then
-  wget -nc https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.18.0.tar.gz
-  tar -xf libtasn1-4.18.0.tar.gz
-  cd libtasn1-4.18.0 || exit
+  wget -nc https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.19.0.tar.gz
+  tar -xf libtasn1-4.19.0.tar.gz
+  cd libtasn1-4.19.0 || exit
   ./configure \
    --host=$WGET_MINGW_HOST \
    --disable-shared \
