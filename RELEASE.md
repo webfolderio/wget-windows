@@ -8,8 +8,8 @@
 | nettle        | 3.9.1                | n/a                   |
 | libtasn1      | 4.19.0               | n/a                   |
 | libidn2       | 2.3.0                | 2.3.0                 |
-| cares         | 1.17.2               | 1.17.2                |
 | libunistring  | 1.1                  | 1.1                   |
+| cares         | 1.19.1               | 1.19.1                |
 | libpsl        | 0.21.1               | 0.21.1                |
 | libiconv      | 1.17                 | 1.17                  |
 | pcre2         | 10.40                | 10.40                 |

@@ -148,9 +148,9 @@ fi
 # build cares
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libcares.a ]; then
-  wget -nc https://github.com/c-ares/c-ares/releases/download/cares-1_17_2/c-ares-1.17.2.tar.gz
-  tar -xf c-ares-1.17.2.tar.gz
-  cd c-ares-1.17.2 || exit
+  wget -nc https://github.com/c-ares/c-ares/releases/download/cares-1_19_1/c-ares-1.19.1.tar.gz
+  tar -xf c-ares-1.19.1.tar.gz
+  cd c-ares-1.19.1 || exit
   CPPFLAGS="-DCARES_STATICLIB=1" \
   ./configure \
   --host=$WGET_MINGW_HOST \
@@ -398,7 +398,7 @@ CFLAGS="-I$INSTALL_PATH/include -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -D
  PCRE2_LIBS="-L$INSTALL_PATH/lib -lpcre2-8"  \
  METALINK_CFLAGS="-I$INSTALL_PATH/include" \
  METALINK_LIBS="-L$INSTALL_PATH/lib -lmetalink -lexpat" \
- LIBS="-L$INSTALL_PATH/lib -lhogweed -lnettle -lgmp -ltasn1 -lidn2 -lpsl -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lz -lcrypt32 -lpthread" \
+ LIBS="-L$INSTALL_PATH/lib -lhogweed -lnettle -lgmp -ltasn1 -lidn2 -lpsl -liphlpapi -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lz -lcrypt32 -lpthread" \
  ./configure \
  --host=$WGET_MINGW_HOST \
  --prefix="$INSTALL_PATH" \
@@ -440,7 +440,7 @@ CFLAGS="-I$INSTALL_PATH/include -DCARES_STATICLIB=1 -DPCRE2_STATIC=1 -DNDEBUG -O
  PCRE2_LIBS="-L$INSTALL_PATH/lib -lpcre2-8"  \
  METALINK_CFLAGS="-I$INSTALL_PATH/include" \
  METALINK_LIBS="-L$INSTALL_PATH/lib -lmetalink -lexpat" \
- LIBS="-L$INSTALL_PATH/lib -lidn2 -lpsl -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lcrypto -lssl -lz -lcrypt32" \
+ LIBS="-L$INSTALL_PATH/lib -lidn2 -lpsl -liphlpapi -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lcrypto -lssl -lz -lcrypt32" \
  ./configure \
  --host=$WGET_MINGW_HOST \
  --prefix="$INSTALL_PATH" \
