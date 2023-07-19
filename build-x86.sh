@@ -16,7 +16,7 @@ export MINGW_STRIP_TOOL=i686-w64-mingw32-strip
 # build gmp
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libgmp.a ]; then
-  wget -nc https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz
+  wget -nc https://ftp.gnu.org/gnu/gmp/gmp-6.2.1.tar.xz
   tar -xf gmp-6.2.1.tar.xz
   cd gmp-6.2.1 || exit
   ./configure \
