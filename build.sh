@@ -302,9 +302,9 @@ fi
 # build expat
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libexpat.a ]; then
-  wget -nc https://github.com/libexpat/libexpat/releases/download/R_2_4_8/expat-2.4.8.tar.gz
-  tar -xf expat-2.4.8.tar.gz
-  cd expat-2.4.8 || exit
+  wget -nc https://github.com/libexpat/libexpat/releases/download/R_2_5_0/expat-2.5.0.tar.gz
+  tar -xf expat-2.5.0.tar.gz
+  cd expat-2.5.0 || exit
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
