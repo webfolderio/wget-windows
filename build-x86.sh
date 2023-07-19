@@ -34,9 +34,9 @@ fi
 # build nettle
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libnettle.a ]; then
-  wget -nc https://ftp.gnu.org/gnu/nettle/nettle-3.8.tar.gz
-  tar -xf nettle-3.8.tar.gz
-  cd nettle-3.8 || exit
+  wget -nc https://ftp.gnu.org/gnu/nettle/nettle-3.9.1.tar.gz
+  tar -xf nettle-3.9.1.tar.gz
+  cd nettle-3.9.1 || exit
   CFLAGS="-I$INSTALL_PATH/include" \
   LDFLAGS="-L$INSTALL_PATH/lib" \
   ./configure \

@@ -5,8 +5,8 @@
 | gnutls        | 3.7.6                | n/a                   |
 | openssl       | n/a                  | 1.1.1o                |
 | gmp           | 6.2.1                | n/a                   |
-| nettle        | 3.8                  | n/a                   |
 | libtasn1      | 4.18                 | n/a                   |
+| nettle        | 3.9.1                | n/a                   |
 | libidn2       | 2.3.0                | 2.3.0                 |
 | libunistring  | 1.0                  | 1.0                   |
 | cares         | 1.17.2               | 1.17.2                |
