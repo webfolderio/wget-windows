@@ -1,4 +1,4 @@
-# Windows binaries of GNU Wget 1.21.3
+# Windows binaries of GNU Wget 1.21.4
 
 [![wget](https://github.com/webfolderio/wget-windows/actions/workflows/wget.yml/badge.svg)](https://github.com/webfolderio/wget-windows/actions/workflows/wget.yml)
 

@@ -27,22 +27,22 @@ jobs:
       - name: Archive gnutls
         uses: actions/upload-artifact@v1
         with:
-          name: wget-1.21.3-64bit-GnuTLS
+          name: wget-1.21.4-64bit-GnuTLS
           path: build-wget-webfolder.io/install/wget-gnutls/wget-gnutls-x64.exe
       - name: Archive openssl
         uses: actions/upload-artifact@v1
         with:
-          name: wget-1.21.3-64bit-OpenSSL
+          name: wget-1.21.4-64bit-OpenSSL
           path: build-wget-webfolder.io/install/wget-openssl/wget-openssl-x64.exe
       - name: Archive gnutls (x86)
         uses: actions/upload-artifact@v1
         with:
-          name: wget-1.21.3-32bit-GnuTLS
+          name: wget-1.21.4-32bit-GnuTLS
           path: build-wget-webfolder-x86.io/install/wget-gnutls/wget-gnutls-x86.exe
       - name: Archive openssl (x86)
         uses: actions/upload-artifact@v1
         with:
-          name: wget-1.21.3-32bit-OpenSSL
+          name: wget-1.21.4-32bit-OpenSSL
           path: build-wget-webfolder-x86.io/install/wget-openssl/wget-openssl-x86.exe
       - uses: ncipollo/release-action@v1
         with:

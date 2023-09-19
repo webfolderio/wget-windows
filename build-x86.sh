@@ -16,7 +16,7 @@ export MINGW_STRIP_TOOL=i686-w64-mingw32-strip
 # build gmp
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libgmp.a ]; then
-  wget -nc https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz
+  wget -nc https://ftp.gnu.org/gnu/gmp/gmp-6.2.1.tar.xz
   tar -xf gmp-6.2.1.tar.xz
   cd gmp-6.2.1 || exit
   ./configure \
@@ -34,9 +34,9 @@ fi
 # build nettle
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libnettle.a ]; then
-  wget -nc https://ftp.gnu.org/gnu/nettle/nettle-3.8.tar.gz
-  tar -xf nettle-3.8.tar.gz
-  cd nettle-3.8 || exit
+  wget -nc https://ftp.gnu.org/gnu/nettle/nettle-3.9.1.tar.gz
+  tar -xf nettle-3.9.1.tar.gz
+  cd nettle-3.9.1 || exit
   CFLAGS="-I$INSTALL_PATH/include" \
   LDFLAGS="-L$INSTALL_PATH/lib" \
   ./configure \
@@ -55,9 +55,9 @@ fi
 # build tasn
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libtasn1.a ]; then
-  wget -nc https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.18.0.tar.gz
-  tar -xf libtasn1-4.18.0.tar.gz
-  cd libtasn1-4.18.0 || exit
+  wget -nc https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.19.0.tar.gz
+  tar -xf libtasn1-4.19.0.tar.gz
+  cd libtasn1-4.19.0 || exit
   ./configure \
    --host=$WGET_MINGW_HOST \
    --disable-shared \
@@ -93,9 +93,9 @@ fi
 # build unistring
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libunistring.a ]; then
-  wget -nc https://ftp.gnu.org/gnu/libunistring/libunistring-1.0.tar.gz
-  tar -xf libunistring-1.0.tar.gz
-  cd libunistring-1.0 || exit
+  wget -nc https://ftp.gnu.org/gnu/libunistring/libunistring-1.1.tar.gz
+  tar -xf libunistring-1.1.tar.gz
+  cd libunistring-1.1 || exit
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
@@ -111,9 +111,9 @@ fi
 # build gnutls
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libgnutls.a ]; then
-  wget -nc https://www.gnupg.org/ftp/gcrypt/gnutls/v3.7/gnutls-3.7.6.tar.xz
-  tar -xf gnutls-3.7.6.tar.xz
-  cd gnutls-3.7.6 || exit
+  wget -nc https://www.gnupg.org/ftp/gcrypt/gnutls/v3.8/gnutls-3.8.0.tar.xz
+  tar -xf gnutls-3.8.0.tar.xz
+  cd gnutls-3.8.0 || exit
   PKG_CONFIG_PATH="$INSTALL_PATH/lib/pkgconfig" \
   CFLAGS="-I$INSTALL_PATH/include" \
   LDFLAGS="-L$INSTALL_PATH/lib" \
@@ -148,9 +148,9 @@ fi
 # build cares
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libcares.a ]; then
-  wget -nc https://github.com/c-ares/c-ares/releases/download/cares-1_17_2/c-ares-1.17.2.tar.gz
-  tar -xf c-ares-1.17.2.tar.gz
-  cd c-ares-1.17.2 || exit
+  wget -nc https://github.com/c-ares/c-ares/releases/download/cares-1_19_1/c-ares-1.19.1.tar.gz
+  tar -xf c-ares-1.19.1.tar.gz
+  cd c-ares-1.19.1 || exit
   CPPFLAGS="-DCARES_STATICLIB=1" \
   ./configure \
   --host=$WGET_MINGW_HOST \
@@ -216,9 +216,9 @@ fi
 # build pcre2
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libpcre2-8.a ]; then
-  wget -nc https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.40/pcre2-10.40.tar.gz
-  tar -xf pcre2-10.40.tar.gz
-  cd pcre2-10.40 || exit
+  wget -nc https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.41/pcre2-10.41.tar.gz
+  tar -xf pcre2-10.41.tar.gz
+  cd pcre2-10.41 || exit
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
@@ -235,9 +235,9 @@ fi
 # build gpg-error
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libgpg-error.a ]; then
-  wget -nc https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.45.tar.gz
-  tar -xf libgpg-error-1.45.tar.gz
-  cd libgpg-error-1.45 || exit
+  wget -nc https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.47.tar.gz
+  tar -xf libgpg-error-1.47.tar.gz
+  cd libgpg-error-1.47 || exit
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
@@ -255,9 +255,9 @@ fi
 # build assuan
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libassuan.a ]; then
-  wget -nc https://gnupg.org/ftp/gcrypt/libassuan/libassuan-2.5.5.tar.bz2
-  tar -xf libassuan-2.5.5.tar.bz2
-  cd libassuan-2.5.5 || exit
+  wget -nc https://gnupg.org/ftp/gcrypt/libassuan/libassuan-2.5.6.tar.bz2
+  tar -xf libassuan-2.5.6.tar.bz2
+  cd libassuan-2.5.6 || exit
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
@@ -276,9 +276,9 @@ fi
 # build gpgme
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libgpgme.a ]; then
-  wget -nc https://gnupg.org/ftp/gcrypt/gpgme/gpgme-1.17.1.tar.bz2
-  tar -xf gpgme-1.17.1.tar.bz2
-  cd gpgme-1.17.1 || exit
+  wget -nc https://gnupg.org/ftp/gcrypt/gpgme/gpgme-1.21.0.tar.bz2
+  tar -xf gpgme-1.21.0.tar.bz2
+  cd gpgme-1.21.0 || exit
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
@@ -302,9 +302,9 @@ fi
 # build expat
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libexpat.a ]; then
-  wget -nc https://github.com/libexpat/libexpat/releases/download/R_2_4_8/expat-2.4.8.tar.gz
-  tar -xf expat-2.4.8.tar.gz
-  cd expat-2.4.8 || exit
+  wget -nc https://github.com/libexpat/libexpat/releases/download/R_2_5_0/expat-2.5.0.tar.gz
+  tar -xf expat-2.5.0.tar.gz
+  cd expat-2.5.0 || exit
   ./configure \
   --host=$WGET_MINGW_HOST \
   --disable-shared \
@@ -347,9 +347,9 @@ fi
 # build zlib
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libz.a ]; then
-  wget -nc https://zlib.net/zlib-1.2.12.tar.gz
-  tar -xf zlib-1.2.12.tar.gz
-  cd zlib-1.2.12 || exit
+  wget -nc https://zlib.net/zlib-1.2.13.tar.gz
+  tar -xf zlib-1.2.13.tar.gz
+  cd zlib-1.2.13 || exit
   CC=$WGET_GCC CFLAGS="-m32 -march=i686" ./configure --static --prefix="$INSTALL_PATH"
   (($? != 0)) && { printf '%s\n' "[zlib] configure failed"; exit 1; }
   make
@@ -362,9 +362,9 @@ fi
 # build openssl
 # -----------------------------------------------------------------------------
 if [ ! -f "$INSTALL_PATH"/lib/libssl.a ]; then
-  wget -nc https://www.openssl.org/source/openssl-1.1.1q.tar.gz
-  tar -xf openssl-1.1.1q.tar.gz
-  cd openssl-1.1.1q || exit
+  wget -nc https://www.openssl.org/source/openssl-1.1.1u.tar.gz
+  tar -xf openssl-1.1.1u.tar.gz
+  cd openssl-1.1.1u || exit
   ./Configure \
   -m32 \
   --static \
@@ -384,13 +384,13 @@ fi
 # -----------------------------------------------------------------------------
 # build wget (gnuTLS)
 # -----------------------------------------------------------------------------
-wget -nc https://ftp.gnu.org/gnu/wget/wget-1.21.3.tar.gz
-tar -xf wget-1.21.3.tar.gz
-cd wget-1.21.3 || exit
+wget -nc https://ftp.gnu.org/gnu/wget/wget-1.21.4.tar.gz
+tar -xf wget-1.21.4.tar.gz
+cd wget-1.21.4 || exit
 CFLAGS="-I$INSTALL_PATH/include -D_WIN32_WINNT=0x601 -DGNUTLS_INTERNAL_BUILD=1 -DCARES_STATICLIB=1 -DPCRE2_STATIC=1 -DNDEBUG -O2 -march=$WGET_ARCH -mtune=generic" \
  LDFLAGS="-L$INSTALL_PATH/lib -static -static-libgcc" \
  GNUTLS_CFLAGS=$CFLAGS \
- GNUTLS_LIBS="-L$INSTALL_PATH/lib -lgnutls" \
+ GNUTLS_LIBS="-L$INSTALL_PATH/lib -lgnutls -lbcrypt -lncrypt" \
  LIBPSL_CFLAGS=$CFLAGS \
  LIBPSL_LIBS="-L$INSTALL_PATH/lib -lpsl" \
  CARES_CFLAGS=$CFLAGS \
@@ -399,7 +399,7 @@ CFLAGS="-I$INSTALL_PATH/include -D_WIN32_WINNT=0x601 -DGNUTLS_INTERNAL_BUILD=1 -
  PCRE2_LIBS="-L$INSTALL_PATH/lib -lpcre2-8"  \
  METALINK_CFLAGS="-I$INSTALL_PATH/include" \
  METALINK_LIBS="-L$INSTALL_PATH/lib -lmetalink -lexpat" \
- LIBS="-L$INSTALL_PATH/lib -lbcrypt -lhogweed -lnettle -lgmp -ltasn1 -lidn2 -lpsl -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lz -lcrypt32 -lpthread" \
+ LIBS="-L$INSTALL_PATH/lib -lbcrypt -lhogweed -lnettle -lgmp -ltasn1 -lidn2 -lpsl -liphlpapi -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lz -lcrypt32 -lpthread" \
  ./configure \
  --host=$WGET_MINGW_HOST \
  --prefix="$INSTALL_PATH" \
@@ -432,7 +432,7 @@ patch src/openssl.c < windows-openssl.diff
 CFLAGS="-I$INSTALL_PATH/include -D_WIN32_WINNT=0x601 -DCARES_STATICLIB=1 -DPCRE2_STATIC=1 -DNDEBUG -O2 -march=$WGET_ARCH -mtune=generic" \
  LDFLAGS="-L$INSTALL_PATH/lib -static -static-libgcc" \
  OPENSSL_CFLAGS=$CFLAGS \
- OPENSSL_LIBS="-L$INSTALL_PATH/lib -lcrypto -lssl" \
+ OPENSSL_LIBS="-L$INSTALL_PATH/lib -lcrypto -lssl -lbcrypt" \
  LIBPSL_CFLAGS=$CFLAGS \
  LIBPSL_LIBS="-L$INSTALL_PATH/lib -lpsl" \
  CARES_CFLAGS=$CFLAGS \
@@ -441,7 +441,7 @@ CFLAGS="-I$INSTALL_PATH/include -D_WIN32_WINNT=0x601 -DCARES_STATICLIB=1 -DPCRE2
  PCRE2_LIBS="-L$INSTALL_PATH/lib -lpcre2-8"  \
  METALINK_CFLAGS="-I$INSTALL_PATH/include" \
  METALINK_LIBS="-L$INSTALL_PATH/lib -lmetalink -lexpat" \
- LIBS="-L$INSTALL_PATH/lib -lbcrypt -lws2_32 -lidn2 -lpsl -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lcrypto -lssl -lz -lcrypt32" \
+ LIBS="-L$INSTALL_PATH/lib -lbcrypt -lws2_32 -lidn2 -lpsl -liphlpapi -lcares -lunistring -liconv -lpcre2-8 -lmetalink -lexpat -lgpgme -lassuan -lgpg-error -lcrypto -lssl -lz -lcrypt32" \
  ./configure \
  --host=$WGET_MINGW_HOST \
  --prefix="$INSTALL_PATH" \
